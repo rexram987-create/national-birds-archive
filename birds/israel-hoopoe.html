@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דוכיפת - ישראל | ארכיון הציפורים הלאומיות</title>
+    <!-- שילוב Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            850: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+        }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
+
+    <!-- סרגל ניווט -->
+    <header class="sticky top-0 z-40 w-full bg-gray-900 border-b border-gray-800 shadow-md">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+                חזור לדף הראשי
+            </a>
+            <h1 class="text-lg font-bold text-gray-300 hidden sm:block">ארכיון הציפורים הלאומיות</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl mx-auto w-full p-4 sm:p-6 lg:p-8">
+        
+        <div class="bg-gray-800 rounded-3xl overflow-hidden border border-gray-700 shadow-xl">
+            <!-- אזור תמונה -->
+            <div class="relative h-64 sm:h-96 w-full cursor-pointer group" onclick="openModal()">
+                <!-- נתיב יחסי שיוצא מתיקיית birds ונכנס ל-images -->
+                <img src="../images/israel-hoopoe.png" alt="דוכיפת" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                    <div class="bg-black/70 text-white px-5 py-2 rounded-full flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+                        הגדל תמונה
+                    </div>
+                </div>
+            </div>
+
+            <!-- תוכן המידע -->
+            <div class="p-6 sm:p-10 space-y-8">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-white mb-2">דוכיפת (Hoopoe)</h2>
+                    <h3 class="text-xl text-blue-400 font-medium">הסמל הלאומי של ישראל</h3>
+                </div>
+
+                <!-- א. אטימולוגיה -->
+                <div class="bg-gray-900 rounded-2xl p-6 border border-gray-700 shadow-inner">
+                    <h4 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        א. אטימולוגיה (חקר השם)
+                    </h4>
+                    <p class="text-gray-400 mb-4 font-mono text-sm border-b border-gray-800 pb-2">שם מדעי: Upupa epops</p>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex flex-col sm:flex-row sm:gap-4 pb-3 border-b border-gray-800/50 last:border-0 last:pb-0">
+                            <span class="font-bold text-blue-300 min-w-[150px]">Upupa (לטינית):</span>
+                            <span>שם אונומטופאי, המחקה באופן ישיר את קריאתה של הציפור בטבע: "הופ-הופ-הופ".</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:gap-4 pb-3 border-b border-gray-800/50 last:border-0 last:pb-0">
+                            <span class="font-bold text-blue-300 min-w-[150px]">epops (יוונית):</span>
+                            <span>השם היווני העתיק לציפור זו (ἔποψ), שגם הוא כנראה נובע מחיקוי צליל קריאתה.</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:gap-4 pb-3 border-b border-gray-800/50 last:border-0 last:pb-0">
+                            <span class="font-bold text-blue-300 min-w-[150px]">דוכיפת (עברית):</span>
+                            <span>לפי האקדמיה, הלחם של המילים "דו" (שתיים) ו"כיפת" (כיפה/כרבולת), על שום כרבולתה המרשימה הנראית ככפולה כשהיא פתוחה. פירוש אחר ממשנה ברכות (כ"ג) מרמז על השורש ד.כ.פ - עוף שמהלך ומנקר ("דוכף") באדמה.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- רשת נתונים -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ב. שנות חיים</h4>
+                        <p class="text-gray-200">10 עד 12 שנים בטבע.</p>
+                    </div>
+                    
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ג. גודל ומשקל</h4>
+                        <p class="text-gray-200">אורך: 25-32 ס"מ. מוטת כנפיים: 44-48 ס"מ. משקל: 46-89 גרם.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-200">הזכר והנקבה דומים מאוד מבחינה חיצונית (אין כמעט דו-צורתיות זוויגית). עם זאת, ניצויו של הזכר נוטה להיות מעט בעל צבעים עזים ובוהקים יותר, במיוחד בעונת החיזור והרבייה.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ו. שם בנגלה של הציפור</h4>
+                        <p class="text-gray-200">מופו (Mupu) או Mohonchura (מוהונצ'ורה), היות שזוהי ציפור הנפוצה גם בתת-היבשת ההודית.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ז. שנת הגילוי</h4>
+                        <p class="text-gray-200">מוכרת משחר ההיסטוריה ומוזכרת כבר במצרים העתיקה ובתנ"ך. הגדרה מדעית רשמית: שנת 1758.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ט. תזונה</h4>
+                        <p class="text-gray-200">אוכלת חרקים מובהקת. התזונה מבוססת על זחלים, תולעים, עכבישים וחרקים שהיא שולפת מתוך האדמה בעזרת מקורה הארוך, הדק והמעוקל.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ד. סיבת הבחירה</h4>
+                        <p class="text-gray-200">נבחרה במאי 2008 (לרגל שנת ה-60 למדינת ישראל) בהצבעה לאומית רחבת היקף. היא מייצגת את נופי הארץ, מועילה מאוד לחקלאות (בכך שהיא מדבירה מזיקים באופן טבעי), ומוזכרת במסורת היהודית (בספר ויקרא כאחד העופות הטמאים למאכל, ובאגדות שלמה המלך ומלכת שבא כנושאת בשורות).</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ח. נסיבות הגילוי</h4>
+                        <p class="text-gray-200">ציפור זו הייתה ידועה לאדם אלפי שנים, אך היא תוארה והוגדרה לראשונה במונחים מדעיים על ידי חוקר הטבע השוודי קארולוס לינאוס בספרו המהפכני "מערכת הטבע" (Systema Naturae) במאה ה-18.</p>
+                    </div>
+
+                    <div class="bg-blue-900/20 border border-blue-900/50 rounded-2xl p-6">
+                        <h4 class="text-lg font-bold text-blue-400 mb-2">י. מצב השימור</h4>
+                        <p class="text-gray-200 font-medium">ללא חשש (LC - Least Concern). אוכלוסייתה יציבה, רחבת תפוצה ואינה נמצאת בסכנת הכחדה.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- פוטר -->
+    <footer class="py-6 border-t border-gray-800 bg-gray-900 mt-auto">
+        <div class="max-w-[1440px] mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>יוצר: רם | שנת יצירה: 2026 | נבנה בגיטהאב</p>
+        </div>
+    </footer>
+
+    <!-- חלון צף לתמונה -->
+    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/90 items-center justify-center p-4 backdrop-blur-sm" onclick="closeModal()">
+        <div class="relative max-w-5xl w-full flex justify-center" onclick="event.stopPropagation()">
+            <!-- כפתור סגירה -->
+            <button onclick="closeModal()" class="absolute -top-12 right-0 p-2 text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-full transition-colors border border-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <img src="../images/israel-hoopoe.png" alt="דוכיפת" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-gray-700">
+            <div class="absolute bottom-4 left-0 right-0 text-center pointer-events-none">
+                <span class="bg-black/70 text-white px-4 py-2 rounded-full text-lg font-bold shadow-lg backdrop-blur-md">דוכיפת - ישראל</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
