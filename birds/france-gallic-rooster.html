@@ -38,7 +38,7 @@
     <!-- סרגל ניווט -->
     <header class="sticky top-0 z-40 w-full bg-gray-900 border-b border-gray-800 shadow-md">
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <!-- נתיב מעודכן ליציאה מתיקיית birds חזרה לשורש -->
+            <!-- יציאה מתיקיית birds אל ה-index שבשורש -->
             <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -54,7 +54,8 @@
         <div class="bg-gray-800 rounded-3xl overflow-hidden border border-gray-700 shadow-xl">
             <!-- אזור תמונה - לחיצה תפתח את החלון הצף -->
             <div class="relative h-64 sm:h-96 w-full cursor-pointer group" onclick="openModal()">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster.jpg/800px-Brown_Leghorn_rooster.jpg" alt="תרנגול גאלי" class="w-full h-full object-cover">
+                <!-- העדכון: נתיב מקומי לתיקיית images -->
+                <img src="../images/france-gallic-rooster.png" alt="תרנגול גאלי" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                     <div class="bg-black/70 text-white px-5 py-2 rounded-full flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
@@ -157,7 +158,8 @@
             <button onclick="closeModal()" class="absolute -top-12 right-0 p-2 text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-full transition-colors border border-gray-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster.jpg/800px-Brown_Leghorn_rooster.jpg" alt="תרנגול גאלי" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-gray-700">
+            <!-- העדכון גם כאן: נתיב מקומי -->
+            <img src="../images/france-gallic-rooster.png" alt="תרנגול גאלי" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-gray-700">
             <div class="absolute bottom-4 left-0 right-0 text-center pointer-events-none">
                 <span class="bg-black/70 text-white px-4 py-2 rounded-full text-lg font-bold shadow-lg backdrop-blur-md">תרנגול גאלי - צרפת</span>
             </div>
