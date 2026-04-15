@@ -1,0 +1,216 @@
+```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עיט סלאדין - מצרים | מחקר היסטורי וזואולוגי מעמיק</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: { 850: '#1f2937', 900: '#111827', 950: '#030712' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            line-height: 1.8;
+        }
+        .text-justify { text-align: justify; }
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
+
+    <!-- סרגל ניווט סטטי -->
+    <header class="w-full bg-gray-900 border-b border-gray-800 shadow-md">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+                חזרה לארכיון הראשי
+            </a>
+            <span class="text-gray-500 text-sm hidden md:block italic">ארכיון הציפורים הלאומיות - מחקר מעמיק</span>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-8 lg:p-12">
+        
+        <article class="bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-2xl">
+            
+            <!-- אזור תמונה מרכזי -->
+            <div class="relative h-72 sm:h-[500px] w-full cursor-pointer group" onclick="openModal()">
+                <img src="../images/egypt-eagle-of-saladin.png" alt="עיט סלאדין" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-8 right-8">
+                    <div class="bg-blue-600/90 backdrop-blur-md px-6 py-2 rounded-full flex items-center gap-3 shadow-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        <span class="font-bold text-white">הגדל תמונה למחקר ויזואלי</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8 sm:p-14 space-y-12">
+                
+                <header class="border-b border-gray-700 pb-8">
+                    <h2 class="text-5xl sm:text-6xl font-black text-white mb-4 tracking-tighter">עיט סלאדין (Eagle of Saladin)</h2>
+                    <div class="flex flex-wrap items-center gap-4 text-blue-400">
+                        <span class="text-2xl font-light italic">Aquila nipalensis</span>
+                        <span class="h-1.5 w-1.5 rounded-full bg-gray-600"></span>
+                        <span class="text-xl font-bold uppercase tracking-widest">מצרים (Egypt)</span>
+                    </div>
+                </header>
+
+                <!-- א. אטימולוגיה מורחבת ומעמיקה -->
+                <section>
+                    <h4 class="text-2xl font-bold text-white mb-8 flex items-center gap-4">
+                        <span class="h-10 w-2 bg-blue-600 rounded-full"></span>
+                        א. אטימולוגיה (חקר השם המלא)
+                    </h4>
+                    <div class="grid gap-6">
+                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
+                            <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם המדעי (לטינית ויוונית)</h5>
+                            <div class="space-y-4 text-gray-300">
+                                <p><strong class="text-white">Aquila (לטינית):</strong> פירושה פשוט "עיט". מילה זו היא השורש לכל משפחת העיטים הטקסונומית ומייצגת עוצמה וחדות ראייה.</p>
+                                <p><strong class="text-white">nipalensis (לטינית מודרנית):</strong> סיומת מציינת מקום - "של נפאל". העיט נקרא כך משום שהדגימה הראשונה שתוארה מדעית נאספה באזור נפאל, אם כי תפוצתו רחבה הרבה יותר.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
+                            <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם ההרלדי (ערבית והיסטוריה)</h5>
+                            <div class="space-y-4 text-gray-300 text-justify">
+                                <p><strong class="text-white">עיט סלאדין (عقاب صلاح الدين):</strong> נקרא על שמו של <span class="text-blue-200 font-bold">צלאח א-דין יוסף אבן איובּ</span>, מייסד השושלת האיובּית. הסמל נמצא חקוק על חומות מצודת קהיר שנבנתה בתקופתו.</p>
+                                <p><strong class="text-white">עוקאב (عقاب):</strong> המילה הערבית לעיט, המבדילה אותו מהנשר (Nisr). בעולם הערבי, העיט נחשב לסמל של אומץ עילאי, בעוד הנשר המקראי (Vulture) נתפס לעיתים כאוכל נבלות.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- נתונים ביולוגיים וזואולוגיים -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4">ב. שנות חיים</h4>
+                        <p class="text-gray-200 text-lg">בטבע, עיט הערבות חי בין <span class="text-blue-400 font-bold">20 ל-25 שנים</span>. בשבי, עם טיפול רפואי ותזונה יציבה, פרטים עשויים להגיע לגיל 40.</p>
+                    </section>
+
+                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4">ג. גודל ומשקל</h4>
+                        <div class="space-y-2 text-gray-200 text-lg">
+                            <p><strong>אורך גוף:</strong> 62 עד 81 ס"מ.</p>
+                            <p><strong>מוטת כנפיים:</strong> 1.65 עד 2.15 מטרים.</p>
+                            <p><strong>משקל:</strong> 2.3 עד 4.9 ק"ג.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ד. סיבת הבחירה - מחקר היסטורי ולאומי -->
+                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20">
+                    <h4 class="text-gray-400 font-bold mb-6 flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                        ד. סיבת הבחירה הלאומית
+                    </h4>
+                    <div class="text-gray-300 space-y-4 text-justify">
+                        <p>העיט נבחר לסמל הלאומי של מצרים המודרנית כחלק מתהליך הלאומיות הערבית של המאה ה-20, במיוחד תחת שלטונו של גמאל עבד אל-נאצר. הבחירה ב"עיט סלאדין" נועדה לקשור את מצרים המודרנית לימי תהילתה ההיסטוריים של המדינה תחת צלאח א-דין, המנהיג שהביס את הצלבנים ואיחד את העולם המוסלמי.</p>
+                        <p>העיט מסמל <strong class="text-white">ריבונות, כוח צבאי וגאווה ערבית</strong>. הוא מופיע במרכז דגל מצרים (החל מ-1984 בגרסתו הנוכחית) ובחותם המדינה, כשהוא אוחז במגן המעוטר בצבעי הלאום (אדום, לבן ושחור).</p>
+                    </div>
+                </section>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
+                        <h4 class="text-gray-400 font-bold mb-4">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-300 leading-relaxed">העיטים מציגים דימורפיזם זוויגי של גודל בלבד. הנקבות גדולות וכבדות מהזכרים בכ-15%-20%. מבחינת ניצוי, שני המינים דומים מאוד: צבע חום כהה אחיד עם כתם בהיר בעורף ונוצות טיסה כהות. לעיט צעיר יש פס בהיר בולט בכנף שנעלם בבגרות.</p>
+                    </section>
+
+                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
+                        <h4 class="text-gray-400 font-bold mb-4">ו. שם בנגלה של הציפור</h4>
+                        <p class="text-gray-300 text-2xl font-black italic">סטפה איגל (স্টেপ ঈগল - Steppe Eagle)</p>
+                        <p class="text-xs text-gray-500 mt-2 tracking-widest uppercase font-mono italic">מכונה כך בשל היותו נפוץ בערבות (Steppes) של מרכז אסיה.</p>
+                    </section>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
+                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ז. שנת הגילוי (טקסונומיה)</h4>
+                        <p class="text-gray-300 text-3xl font-black tracking-tighter">1833</p>
+                        <p class="text-sm text-gray-500 italic mt-2">תוארה מדעית על ידי חוקר הטבע כריסטיאן לודוויג ברם (Brehm).</p>
+                    </section>
+
+                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
+                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ט. תזונה</h4>
+                        <p class="text-gray-300">טורף פעיל ואופורטוניסט. ניזון בעיקר מיונקים קטנים (כמו סנאיי קרקע וגרבילים), ציפורים קטנות וזוחלים. בעת נדידה הוא עשוי לאכול גם פגרים וחרקים גדולים (כמו טרמיטים) כשהוא על הקרקע.</p>
+                    </section>
+                </div>
+
+                <!-- ח. נסיבות הגילוי ההיסטוריות -->
+                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20 shadow-inner">
+                    <h4 class="text-gray-400 font-bold mb-4 text-xl">ח. נסיבות הגילוי והקשר למצודת קהיר</h4>
+                    <div class="text-gray-300 space-y-4 text-justify">
+                        <p>הקשר ההיסטורי של העיט למצרים התגלה מחדש בעת המודרנית בחפירות ושיפוצים במצודת קהיר (ה-Citadel). על החומה המערבית של המצודה נמצא תבליט אבן עתיק של עיט ללא ראש, המיוחס לתקופת בניית המצודה על ידי צלאח א-דין. הגילוי הארכיאולוגי הזה שימש בסיס ויזואלי לעיצוב הסמל הלאומי המצרי ב-1952, כשהוא מוצג כנשר זקוף וחזק המביט ימינה.</p>
+                    </div>
+                </section>
+
+                <!-- מצב שימור -->
+                <div class="bg-blue-900/20 border border-blue-800/40 rounded-[2rem] p-10 shadow-xl">
+                    <h4 class="text-2xl font-black text-blue-400 mb-4 tracking-tighter uppercase">י. מצב השימור</h4>
+                    <p class="text-gray-100 text-xl font-bold mb-4">בסכנת הכחדה (Endangered - EN)</p>
+                    <p class="text-gray-300 leading-relaxed text-justify">אוכלוסיית עיט הערבות חוותה ירידה דרמטית בעשורים האחרונים. האיומים המרכזיים כוללים אובדן שטחי מחייה עקב חקלאות, התחשמלות בקווי מתח גבוה, והרעלות משניות מחומרי הדברה. מצרים משתתפת בתוכניות בינלאומיות להגנה על מסלולי הנדירה של העיט העוברים דרכה.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-gray-800 bg-gray-950 text-center">
+        <p class="text-gray-500 text-sm font-medium">מחקר מעמיק ועיצוב עבור רם • 2026</p>
+    </footer>
+
+    <!-- חלון צף (Modal) -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 items-center justify-center p-4 backdrop-blur-2xl transition-all duration-500 opacity-0" onclick="closeModal()">
+        <div class="relative max-w-6xl w-full flex flex-col items-center p-4" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute -top-16 left-0 p-4 text-white bg-gray-800/50 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <img src="../images/egypt-eagle-of-saladin.png" alt="עיט סלאדין" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-gray-700/50 scale-95 transition-transform duration-500" id="modalImg">
+            <div class="mt-8 text-center">
+                <h5 class="text-3xl font-black text-white tracking-[0.2em] uppercase">Aquila nipalensis</h5>
+                <p class="text-blue-400 font-bold">עיט סלאדין - הסמל הלאומי של מצרים</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            const m = document.getElementById('imageModal');
+            const img = document.getElementById('modalImg');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-95'); }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            const m = document.getElementById('imageModal');
+            const img = document.getElementById('modalImg');
+            m.classList.remove('opacity-100');
+            img.classList.remove('scale-100');
+            img.classList.add('scale-95');
+            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 500);
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if(e.key === "Escape") closeModal(); });
+    </script>
+</body>
+</html>
+
+```
