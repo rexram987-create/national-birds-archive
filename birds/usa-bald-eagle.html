@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>עיט קירח - ארצות הברית | מחקר היסטורי ומדעי מעמיק</title>
+    <title>עיט קירח - ארה"ב | מחקר היסטורי וזואולוגי מקיף ביותר</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,162 +29,218 @@
         .text-justify { text-align: justify; }
         .fade-in { animation: fadeIn 0.8s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        /* אופטימיזציה למסך S25 Ultra */
+        .glass-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-blur: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
 
     <!-- סרגל ניווט סטטי (נגלל עם הדף) -->
-    <header class="w-full bg-gray-900 border-b border-gray-800 shadow-md">
-        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <header class="w-full bg-gray-900 border-b border-gray-800">
+        <div class="max-w-[1440px] mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group font-black text-xl text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-                חזרה לארכיון הראשי
+                חזרה לארכיון
             </a>
-            <span class="text-gray-500 text-sm hidden md:block italic">ארכיון הציפורים הלאומיות - מחקר מעמיק</span>
+            <div class="flex flex-col items-end">
+                <span class="text-white font-bold text-lg">ארכיון הציפורים הלאומיות</span>
+                <span class="text-gray-500 text-xs italic">מחקר מאת רם • 2026</span>
+            </div>
         </div>
     </header>
 
-    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-8 lg:p-12">
+    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-10 lg:p-16">
         
-        <article class="bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-2xl">
+        <article class="bg-gray-800 rounded-[3rem] overflow-hidden border border-gray-700 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.8)]">
             
-            <!-- אזור תמונה מרכזי -->
-            <div class="relative h-72 sm:h-[500px] w-full cursor-pointer group" onclick="openModal()">
-                <img src="../images/usa-bald-eagle.png" alt="עיט קירח" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-8 right-8">
-                    <div class="bg-blue-600/90 backdrop-blur-md px-6 py-2 rounded-full flex items-center gap-3 shadow-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        <span class="font-bold text-white">הגדל תמונה למחקר ויזואלי</span>
-                    </div>
+            <!-- אזור תמונה ראשי -->
+            <div class="relative h-80 sm:h-[600px] w-full cursor-pointer group" onclick="openModal()">
+                <img src="../images/usa-bald-eagle.png" alt="עיט קירח" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2500ms]">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-95"></div>
+                <div class="absolute bottom-12 right-12 left-12">
+                    <h1 class="text-6xl sm:text-8xl font-black text-white tracking-tighter mb-4 text-right">עיט קירח</h1>
+                    <p class="text-blue-400 text-3xl font-light italic text-right">Bald Eagle • United States</p>
                 </div>
             </div>
 
-            <div class="p-8 sm:p-14 space-y-12">
+            <div class="p-8 sm:p-24 space-y-24">
                 
-                <header class="border-b border-gray-700 pb-8">
-                    <h2 class="text-5xl sm:text-6xl font-black text-white mb-4 tracking-tighter">עיט קירח (Bald Eagle)</h2>
-                    <div class="flex flex-wrap items-center gap-4 text-blue-400">
-                        <span class="text-2xl font-light italic">Haliaeetus leucocephalus</span>
-                        <span class="h-1.5 w-1.5 rounded-full bg-gray-600"></span>
-                        <span class="text-xl font-bold uppercase tracking-widest">ארצות הברית (USA)</span>
-                    </div>
-                </header>
-
-                <!-- א. אטימולוגיה מורחבת ומעמיקה -->
+                <!-- א. אטימולוגיה מורחבת (הפרדה מלאה) -->
                 <section>
-                    <h4 class="text-2xl font-bold text-white mb-8 flex items-center gap-4">
-                        <span class="h-10 w-2 bg-blue-600 rounded-full"></span>
+                    <h4 class="text-4xl font-black text-white mb-12 flex items-center gap-5">
+                        <span class="h-16 w-3 bg-blue-600 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.6)]"></span>
                         א. אטימולוגיה (חקר השם המלא)
                     </h4>
-                    <div class="grid gap-6">
-                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
-                            <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם המדעי (שורשים יווניים)</h5>
-                            <div class="space-y-4 text-gray-300">
-                                <p><strong class="text-white">Haliaeetus:</strong> הלחם של המילים היווניות <span class="text-blue-200 italic">hali</span> (ים או מלח) ו-<span class="text-blue-200 italic">aeetos</span> (עיט). המשמעות היא "עיט ים", המתייחסת לסביבת המחייה של המין בקרבת מקורות מים.</p>
-                                <p><strong class="text-white">leucocephalus:</strong> הלחם של המילים <span class="text-blue-200 italic">leukos</span> (לבן) ו-<span class="text-blue-200 italic">kephale</span> (ראש). המשמעות המילולית: "בעל ראש לבן".</p>
+                    <div class="grid gap-12 text-right">
+                        <!-- השם העממי -->
+                        <div class="glass-card p-12 rounded-[3rem]">
+                            <h5 class="text-blue-300 font-black mb-8 border-b border-gray-800 pb-6 text-2xl uppercase tracking-widest text-right">המקור האנגלי: "Bald" אינו קרחת</h5>
+                            <div class="space-y-8 text-gray-300 text-xl leading-relaxed text-justify">
+                                <p>בניגוד לטעות הנפוצה בעת המודרנית, שמו של העיט אינו מעיד על חוסר בנוצות בראשו. מקור השם הוא אטימולוגי-היסטורי:</p>
+                                <div class="bg-gray-950/80 p-8 rounded-3xl border border-blue-500/20 shadow-inner">
+                                    <span class="text-blue-400 font-black block mb-4 text-sm uppercase tracking-widest italic text-right">אנגלית עתיקה:</span>
+                                    <p class="text-xl font-medium">המילה נגזרת מהמילה <strong class="text-white italic">"Balde"</strong> (או Piebald) באנגלית עתיקה, שפירושה המקורי היה <strong class="text-white">"לבן"</strong> או "בעל כתם לבן בולט". השם הוענק לציפור בשל הראש והזנב הלבנים הבוהקים העומדים בניגוד מוחלט לגוף החום הכהה.</p>
+                                </div>
+                                <p class="pt-6 border-t border-gray-700 italic">השם העממי השתמר לאורך המאות אף שמשמעות המילה "Bald" בשפה האנגלית המודרנית השתנתה לחלוטין.</p>
                             </div>
                         </div>
 
-                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
-                            <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם העממי (אנגלית עתיקה)</h5>
-                            <div class="space-y-4 text-gray-300 text-justify">
-                                <p><strong class="text-white">Bald (אנגלית עתיקה):</strong> בניגוד לטעות הנפוצה, המילה אינה מעידה על קרחת (חוסר שיער). היא נגזרת מהמילה <span class="text-blue-200 italic">balde</span> באנגלית עתיקה, שפירושה המקורי היה "לבן" או "בעל כתם לבן". לכן, "Bald Eagle" פירושו "עיט בעל ראש לבן".</p>
+                        <!-- השם המדעי -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-blue-300 font-bold mb-6 text-2xl tracking-tighter">השורש: Haliaeetus</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2">מקור: יוונית עתיקה</p>
+                                <p class="text-gray-300 text-lg leading-relaxed">הלחם של המילים <strong class="text-white italic">Hali</strong> (ים או מלח) ו-<strong class="text-white italic">Aeetos</strong> (עיט). המשמעות היא "עיט ים", המתייחסת לתלותו של המין במקורות מים לשם ציד דגים.</p>
+                            </div>
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-blue-300 font-bold mb-6 text-2xl tracking-tighter">הסיומת: leucocephalus</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2">מקור: יוונית עתיקה</p>
+                                <p class="text-gray-300 text-lg leading-relaxed">הלחם של <strong class="text-white italic">Leukos</strong> (לבן) ו-<strong class="text-white italic">Kephale</strong> (ראש). זהו תיאור פיזיולוגי ישיר ומדויק של המין: "בעל ראש לבן".</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- נתונים ביולוגיים וזואולוגיים -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4">ב. שנות חיים</h4>
-                        <p class="text-gray-200 text-lg">בטבע, העיט הקירח חי בממוצע בין <span class="text-blue-400 font-bold">20 ל-30 שנים</span>. בתנאי שימור מבוקרים תועדו פרטים שהגיעו לגיל מופלג של 50 שנה.</p>
+                <!-- פרק רבייה ותפוצה (סעיפים יא-יד) - חדש ומורחב -->
+                <section class="bg-blue-900/10 border border-blue-900/30 rounded-[4rem] p-12 sm:p-20 shadow-[inset_0_0_50px_rgba(0,0,0,0.5)] text-right">
+                    <h4 class="text-4xl font-black text-blue-400 mb-16 tracking-[0.2em] uppercase text-center italic">ניתוח זואולוגי: רבייה ותפוצה</h4>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יא</span>
+                                כמות ביצים בכל הטלה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>העיט הקירח מטיל בדרך כלל <strong class="text-white text-2xl">1 עד 3 ביצים</strong> בכל מחזור רבייה (הנפוץ ביותר הוא 2 ביצים). הביצים הן לבנות ועגולות, והן מוטלות במרווחים של מספר ימים זו מזו.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יב</span>
+                                תקופת הדגירה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>משך הדגירה נמשך בממוצע <strong class="text-white text-2xl">35 ימים</strong>. שני ההורים משתתפים במלאכת הדגירה, אם כי הנקבה מבלה זמן רב יותר על הביצים בעוד הזכר אחראי על הציד והגנה על הטריטוריה סביב הקן העצום.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יג</span>
+                                תפוצה גאוגרפית
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-justify text-right">
+                                <p>העיט הקירח הוא מין <strong class="text-white">אנדמי לצפון אמריקה</strong>. תפוצתו משתרעת מרוב שטחי קנדה ואלסקה בצפון, דרך כל המדינות של ארה"ב, ועד לצפון מקסיקו בדרום. הוא תמיד יימצא בקרבת גופי מים גדולים (אוקיינוסים, נהרות או אגמים).</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יד</span>
+                                מבנה חברתי: מונוגמיה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>העיט הקירח הוא מין <strong class="text-white text-2xl">מונוגמי לכל החיים</strong> (Mate for Life). בני הזוג נשארים יחד לאורך שנים רבות, מתחזקים יחד את אותו הקן וחוזרים אליו מדי שנה. אם אחד מבני הזוג מת, השורד עשוי למצוא בן זוג חדש.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- שאר הסעיפים (ב-י) ברמה מורחבת -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ב. שנות חיים</h4>
+                        <p class="text-gray-200 text-2xl leading-relaxed text-justify text-right">בטבע, העיט הקירח חי בממוצע בין <span class="text-blue-400 font-black text-right">20 ל-30 שנים</span>. בשימור תועדו פרטים שהגיעו לגיל 50 שנה. תמותת הצעירים גבוהה, אך עיט שהגיע לבגרות נחשב לטורף על עם מעט מאוד איומים טבעיים.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4">ג. גודל ומשקל</h4>
-                        <div class="space-y-2 text-gray-200 text-lg">
-                            <p><strong>אורך גוף:</strong> 70 עד 102 ס"מ.</p>
-                            <p><strong>מוטת כנפיים:</strong> 1.8 עד 2.3 מטרים.</p>
-                            <p><strong>משקל:</strong> 3 עד 6.3 ק"ג (הנקבות כבדות משמעותית).</p>
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl text-right">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ג. גודל ומשקל</h4>
+                        <div class="space-y-6 text-gray-200 text-2xl">
+                            <p><strong>מוטת כנפיים:</strong> 1.8 - 2.3 מטרים.</p>
+                            <p><strong>אורך גוף:</strong> 70 - 102 ס"מ.</p>
+                            <p><strong>משקל:</strong> 3.0 - 6.3 ק"ג.</p>
                         </div>
                     </section>
                 </div>
 
-                <!-- ד. סיבת הבחירה - מחקר היסטורי ולאומי -->
-                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20">
-                    <h4 class="text-gray-400 font-bold mb-6 flex items-center gap-3">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                        ד. סיבת הבחירה הלאומית (1782)
+                <section class="bg-gray-900/50 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-inner text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 flex items-center gap-5 text-3xl tracking-tighter">
+                        <span class="w-5 h-5 rounded-full bg-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.8)]"></span>
+                        ד. סיבת הבחירה כסמל ריבוני
                     </h4>
-                    <div class="text-gray-300 space-y-4 text-justify">
-                        <p>העיט הקירח אומץ כסמל הלאומי של ארה"ב ב-20 ביוני 1782, כאשר הקונטיננטל קונגרס בחר בו לעטר את "החותם הגדול של ארצות הברית". הוא נבחר משום שהוא מייצג <strong class="text-white">כוח, חופש מוחלט וריבונות</strong>.</p>
-                        <p>בניגוד לנשרים אירופאים שסימלו אימפריות ישנות, העיט הקירח הוא המין היחיד של עיט שקיים <strong class="text-white">אך ורק ביבשת אמריקה הצפונית</strong>, מה שהפך אותו לסמל של עצמאות אמריקאית אותנטית. ידוע הסיפור (שייתכן שהוא מיתוס) על בנג'מין פרנקלין שהעדיף את תרנגול ההודו משום שראה בעיט חיה בעלת "אופי מוסרי ירוד" (משום שהוא גונב דגים), אך בסופו של דבר העיט הפך לסמל הבלתי מעורער של האומה.</p>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose">
+                        <p>העיט הקירח אומץ כסמל הלאומי של ארה"ב ב-20 ביוני 1782 על ידי הקונגרס הקונטיננטלי. הוא נבחר משום שהוא מייצג <strong class="text-white uppercase tracking-tighter text-2xl">חופש מוחלט, כוח וריבונות</strong>. בניגוד לעיטים אירופאים שסימלו אימפריות ישנות, העיט הקירח קיים אך ורק ביבשת אמריקה, עובדה שסימלה עבור האבות המייסדים עצמאות אמריקאית אותנטית.</p>
+                        <p>בנג'מין פרנקלין התנגד לבחירה (במכתב מפורסם לבתו) בטענה שהעיט הוא "ציפור בעלת אופי מוסרי ירוד" כיוון שהוא גונב דגים מעופות אחרים, והוא העדיף את תרנגול ההודו כסמל לילידיות ואומץ. למרות זאת, העיט הפך לסמל הבלתי מעורער המופיע על כל חותם רשמי ועל המטבעות האמריקאים.</p>
                     </div>
                 </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4">ה. הבדלים בין זכר ונקבה</h4>
-                        <p class="text-gray-300 leading-relaxed">העיט הקירח מציג דימורפיזם זוויגי של גודל. הנקבות גדולות מהזכרים בכ-25% ומשקלן רב יותר. מבחינת ניצוי, הזכר והנקבה זהים לחלוטין ברגע שהם מגיעים לבגרות (בגיל 5 שנים): לשניהם ראש וזנב לבנים בוהקים, וגוף חום כהה עד שחור.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem]">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-300 text-xl leading-relaxed text-justify text-right">דימורפיזם זוויגי בגודל: הנקבות גדולות וכבדות מהזכרים בכ-25% בממוצע. מבחינת מראה חיצוני, שני המינים זהים לחלוטין ברגע שהם מגיעים לבגרות מלאה (בגיל 5 שנים): לשניהם ראש וזנב לבנים בוהקים, מקור צהוב עז וגוף כהה. עיט צעיר הוא חום לחלוטין ומשנה את צבעו בהדרגה.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4">ו. שם בנגלה של הציפור</h4>
-                        <p class="text-gray-300 text-2xl font-black">באלד איגל (বোল্ড ঈגל - Bald Eagle)</p>
-                        <p class="text-xs text-gray-500 mt-2 tracking-widest italic uppercase font-mono italic">שם מתורגם פונטית מהאנגלית, שכן המין אינו מקומי לדרום אסיה.</p>
-                    </section>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ז. שנת הגילוי (טקסונומיה)</h4>
-                        <p class="text-gray-300 text-3xl font-black tracking-tighter">1766</p>
-                        <p class="text-sm text-gray-500 italic mt-2">הוגדר מדעית על ידי קארולוס לינאוס.</p>
-                    </section>
-
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ט. תזונה</h4>
-                        <p class="text-gray-300">צייד אופורטוניסט הניזון בעיקר מ<strong class="text-white">דגים</strong> (70%-90% מתזונתו). הוא ידוע ביכולתו לצלול במהירות ולחטוף דגים מפני המים. בנוסף, הוא ניזון מעופות מים, יונקים קטנים ולעיתים גם מפגרים.</p>
+                    <section class="glass-card p-12 rounded-[3rem]">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ו. שם בנגלה של הציפור</h4>
+                        <p class="text-gray-300 text-5xl font-black italic">באלד איגל (বোল্ড ঈগল - Bald Eagle)</p>
+                        <p class="text-xs text-gray-500 mt-8 tracking-[0.4em] uppercase font-mono italic">תעתיק פונטי מהשם האנגלי, שכן המין אינו נפוץ בדרום אסיה.</p>
                     </section>
                 </div>
 
-                <!-- ח. נסיבות הגילוי ההיסטוריות -->
-                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20">
-                    <h4 class="text-gray-400 font-bold mb-4 text-xl">ח. נסיבות הגילוי והקשר לילידים האמריקאים</h4>
-                    <div class="text-gray-300 space-y-4 text-justify">
-                        <p>העיט הקירח תואר לראשונה על ידי חוקר הטבע קארולוס לינאוס על בסיס דגימות שנשלחו מקרולינה הדרומית לאירופה. עם זאת, עבור השבטים הילידים של אמריקה הצפונית, הציפור הייתה קדושה מזה אלפי שנים. היא נחשבה לשליחה רוחנית בין בני האדם לבורא, ונוצותיה שימשו (ומשמשות עד היום) בטקסים דתיים ותרבותיים רבי חשיבות כסמל לברכה ואומץ.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter">ז. שנת הגילוי (טקסונומיה)</h4>
+                        <p class="text-gray-300 text-5xl font-black tracking-tighter">1766</p>
+                        <p class="text-sm text-gray-500 italic mt-4">הוגדר מדעית על ידי קארולוס לינאוס על בסיס דגימות מקרולינה הדרומית.</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter">ט. תזונה</h4>
+                        <p class="text-gray-300 text-lg leading-relaxed text-justify text-right">טורף אופורטוניסט הניזון בעיקר מ<strong class="text-white">דגים</strong> (70%-90% מתזונתו). הוא ידוע ביכולתו לצלול במהירות ולחטוף דגים מפני המים בעזרת טפריו העצומים. בנוסף, הוא ניזון מעופות מים, יונקים קטנים ולעיתים גם מפגרים בחורף.</p>
+                    </section>
+                </div>
+
+                <section class="bg-gray-900/60 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-2xl text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 text-3xl uppercase tracking-tighter text-center">ח. נסיבות הגילוי והקשר לילידים</h4>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose">
+                        <p>העיט הקירח תואר למדע המערבי במאה ה-18, אך עבור השבטים הילידים של אמריקה הצפונית הוא היה קדוש ונוכח מזה אלפי שנים. נוצותיו נחשבו למקודשות ושימשו בטקסי העברת כוח, ריפוי ואומץ. הוא נתפס כשליח רוחני המחבר בין בני האדם לבין עולם הרוחות והשמיים, ופגיעה בו נחשבה לחטא חמור בתרבויות רבות.</p>
                     </div>
                 </section>
 
-                <!-- מצב שימור -->
-                <div class="bg-blue-900/20 border border-blue-800/40 rounded-[2rem] p-10 shadow-xl">
-                    <h4 class="text-2xl font-black text-blue-400 mb-4 tracking-tighter uppercase">י. מצב השימור</h4>
-                    <p class="text-gray-100 text-xl font-bold mb-4">ללא חשש (Least Concern - LC)</p>
-                    <p class="text-gray-300 leading-relaxed text-justify">זהו אחד מסיפורי ההצלחה הגדולים של שימור טבע בעולם. לאחר שהיה על סף הכחדה בשנות ה-70 של המאה ה-20 עקב הרעלות DDT, המין הוכרז כמין בסכנת הכחדה. בעקבות חקיקה מחמירה ומאמצי שימור אינטנסיביים, האוכלוסייה השתקמה באופן מלא והמין הוסר מרשימת המינים בסכנה בשנת 2007.</p>
+                <div class="bg-blue-900/40 border border-blue-800/60 rounded-[4rem] p-16 shadow-2xl relative overflow-hidden text-right">
+                    <h4 class="text-4xl font-black text-blue-400 mb-10 tracking-tighter uppercase">י. מצב השימור</h4>
+                    <p class="text-gray-100 text-3xl font-black mb-8">ללא חשש (Least Concern - LC)</p>
+                    <p class="text-gray-300 text-justify italic leading-relaxed text-2xl">זהו אחד מסיפורי ההצלחה הגדולים בהיסטוריה של שימור הטבע. לאחר שהיה על סף הכחדה בשנות ה-70 עקב הרעלות DDT, המין שוקם באופן מלא בעקבות חקיקה מחמירה והגנה פדרלית, והוסר מרשימת המינים בסכנה בשנת 2007.</p>
                 </div>
-
             </div>
-        </div>
+        </article>
     </main>
 
-    <footer class="py-12 border-t border-gray-800 bg-gray-950 text-center">
-        <p class="text-gray-500 text-sm font-medium">מחקר מעמיק ועיצוב עבור רם • 2026</p>
+    <footer class="py-24 border-t border-gray-800 bg-gray-950 text-center">
+        <div class="max-w-4xl mx-auto px-6 text-right">
+            <p class="text-gray-500 font-black tracking-[0.5em] uppercase text-sm mb-6 text-center">Bald Eagle - USA Comprehensive Research • Ram 2026</p>
+            <p class="text-gray-700 text-xs tracking-widest leading-relaxed text-center">נבנה בטכנולוגיית בינה מלאכותית מתקדמת • מותאם אישית למכשיר Samsung S25 Ultra • סרגל ניווט סטטי לשיפור חוויית הקריאה</p>
+        </div>
     </footer>
 
     <!-- חלון צף (Modal) -->
-    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 items-center justify-center p-4 backdrop-blur-2xl transition-all duration-500 opacity-0" onclick="closeModal()">
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/99 items-center justify-center p-4 backdrop-blur-3xl transition-all duration-700 opacity-0" onclick="closeModal()">
         <div class="relative max-w-6xl w-full flex flex-col items-center p-4" onclick="event.stopPropagation()">
-            <button onclick="closeModal()" class="absolute -top-16 left-0 p-4 text-white bg-gray-800/50 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            <button onclick="closeModal()" class="absolute -top-24 left-0 p-6 text-white bg-gray-800/70 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90 active:scale-90 text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <img src="../images/usa-bald-eagle.png" alt="עיט קירח" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-gray-700/50 scale-95 transition-transform duration-500" id="modalImg">
-            <div class="mt-8 text-center">
-                <h5 class="text-3xl font-black text-white tracking-[0.2em] uppercase">Haliaeetus leucocephalus</h5>
-                <p class="text-blue-400 font-bold">הציפור הלאומית של ארצות הברית</p>
+            <img src="../images/usa-bald-eagle.png" alt="עיט קירח" class="max-w-full max-h-[70vh] object-contain rounded-[4rem] shadow-[0_0_200px_rgba(59,130,246,0.4)] border border-gray-700 scale-90 transition-transform duration-700" id="modalImg">
+            <div class="mt-16 text-center space-y-6 text-right">
+                <h5 class="text-5xl font-black text-white tracking-[0.5em] uppercase italic">Haliaeetus leucocephalus</h5>
+                <p class="text-blue-400 font-black tracking-[0.3em] uppercase text-2xl">הציפור הלאומית של ארצות הברית • מחקר ויזואלי</p>
             </div>
         </div>
     </div>
@@ -195,7 +251,7 @@
             const img = document.getElementById('modalImg');
             m.classList.remove('hidden');
             m.classList.add('flex');
-            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-95'); }, 10);
+            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-90'); }, 20);
             document.body.style.overflow = 'hidden';
         }
         function closeModal() {
@@ -203,8 +259,8 @@
             const img = document.getElementById('modalImg');
             m.classList.remove('opacity-100');
             img.classList.remove('scale-100');
-            img.classList.add('scale-95');
-            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 500);
+            img.classList.add('scale-90');
+            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 600);
             document.body.style.overflow = '';
         }
         document.addEventListener('keydown', e => { if(e.key === "Escape") closeModal(); });
