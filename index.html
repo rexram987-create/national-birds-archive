@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ארכיון הציפורים הלאומיות</title>
+    <!-- שילוב Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            850: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #030712; /* gray-950 */
+            color: #f3f4f6; /* gray-100 */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-500/30">
+
+    <!-- סרגל ניווט עליון -->
+    <header class="sticky top-0 z-40 w-full bg-gray-900 border-b border-gray-800 shadow-md">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h1 class="text-xl font-bold text-white tracking-tight">ארכיון הציפורים הלאומיות</h1>
+            </div>
+            <nav class="flex gap-4">
+                <a href="index.html" class="px-3 py-2 rounded-md bg-gray-800 text-white transition-colors">ראשי</a>
+                <a href="about.html" class="px-3 py-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">אודות</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- תוכן מרכזי -->
+    <main class="flex-grow max-w-[1440px] mx-auto w-full p-4 sm:p-6 lg:p-8">
+        <div class="mb-8 text-center sm:text-right">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">הסמלים המעופפים של העולם</h2>
+            <p class="text-gray-400 text-lg">בחר ציפור כדי לגלות מחקר היסטורי וזואולוגי מקיף.</p>
+        </div>
+        
+        <!-- רשת הציפורים (Grid) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- כרטיסיה 1: תרנגול גאלי -->
+            <a href="france-gallic-rooster.html" class="group block relative bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster.jpg/800px-Brown_Leghorn_rooster.jpg" alt="תרנגול גאלי" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">תרנגול גאלי</h3>
+                        <span class="bg-gray-900 text-blue-400 text-xs px-2 py-1 rounded-md border border-gray-700">צרפת</span>
+                    </div>
+                    <div class="flex items-center text-gray-400 text-sm mt-4 group-hover:text-blue-400 transition-colors">
+                        צפה במחקר המלא &larr;
+                    </div>
+                </div>
+            </a>
+
+            <!-- כרטיסיה 2: דוכיפת -->
+            <a href="israel-hoopoe.html" class="group block relative bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Hoopoe_upupa_epops.jpg/800px-Hoopoe_upupa_epops.jpg" alt="דוכיפת" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">דוכיפת</h3>
+                        <span class="bg-gray-900 text-blue-400 text-xs px-2 py-1 rounded-md border border-gray-700">ישראל</span>
+                    </div>
+                    <div class="flex items-center text-gray-400 text-sm mt-4 group-hover:text-blue-400 transition-colors">
+                        צפה במחקר המלא &larr;
+                    </div>
+                </div>
+            </a>
+
+            <!-- כרטיסיה 3: עיט קירח -->
+            <a href="usa-bald-eagle.html" class="group block relative bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/About_to_Launch_%2826075320352%29.jpg/800px-About_to_Launch_%2826075320352%29.jpg" alt="עיט קירח" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">עיט קירח</h3>
+                        <span class="bg-gray-900 text-blue-400 text-xs px-2 py-1 rounded-md border border-gray-700">ארצות הברית</span>
+                    </div>
+                    <div class="flex items-center text-gray-400 text-sm mt-4 group-hover:text-blue-400 transition-colors">
+                        צפה במחקר המלא &larr;
+                    </div>
+                </div>
+            </a>
+
+            <!-- כרטיסיה 4: דודו -->
+            <a href="mauritius-dodo.html" class="group block relative bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Dodo_1.JPG/800px-Dodo_1.JPG" alt="דודו" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">דודו</h3>
+                        <span class="bg-gray-900 text-blue-400 text-xs px-2 py-1 rounded-md border border-gray-700">מאוריציוס</span>
+                    </div>
+                    <div class="flex items-center text-gray-400 text-sm mt-4 group-hover:text-blue-400 transition-colors">
+                        צפה במחקר המלא &larr;
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- פוטר (תחתית הדף) -->
+    <footer class="py-6 border-t border-gray-800 bg-gray-900">
+        <div class="max-w-[1440px] mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>יוצר: רם | שנת יצירה: 2026 | נבנה בגיטהאב</p>
+        </div>
+    </footer>
+
+</body>
+</html>
