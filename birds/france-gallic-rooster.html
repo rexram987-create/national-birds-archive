@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תרנגול גאלי - צרפת | ארכיון הציפורים הלאומיות</title>
+    <!-- שילוב Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            850: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+        }
+        /* אנימציית כניסה רכה */
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
+
+    <!-- סרגל ניווט -->
+    <header class="sticky top-0 z-40 w-full bg-gray-900 border-b border-gray-800 shadow-md">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <!-- נתיב מעודכן ליציאה מתיקיית birds חזרה לשורש -->
+            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+                חזור לדף הראשי
+            </a>
+            <h1 class="text-lg font-bold text-gray-300 hidden sm:block">ארכיון הציפורים הלאומיות</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl mx-auto w-full p-4 sm:p-6 lg:p-8">
+        
+        <div class="bg-gray-800 rounded-3xl overflow-hidden border border-gray-700 shadow-xl">
+            <!-- אזור תמונה - לחיצה תפתח את החלון הצף -->
+            <div class="relative h-64 sm:h-96 w-full cursor-pointer group" onclick="openModal()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster.jpg/800px-Brown_Leghorn_rooster.jpg" alt="תרנגול גאלי" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                    <div class="bg-black/70 text-white px-5 py-2 rounded-full flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+                        הגדל תמונה
+                    </div>
+                </div>
+            </div>
+
+            <!-- תוכן המידע -->
+            <div class="p-6 sm:p-10 space-y-8">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-white mb-2">תרנגול גאלי (Gallic Rooster)</h2>
+                    <h3 class="text-xl text-blue-400 font-medium">הסמל הלאומי של צרפת</h3>
+                </div>
+
+                <!-- א. אטימולוגיה -->
+                <div class="bg-gray-900 rounded-2xl p-6 border border-gray-700 shadow-inner">
+                    <h4 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        א. אטימולוגיה (חקר השם)
+                    </h4>
+                    <p class="text-gray-400 mb-4 font-mono text-sm border-b border-gray-800 pb-2">שם מדעי: Gallus gallus domesticus</p>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex flex-col sm:flex-row sm:gap-4 pb-3 border-b border-gray-800/50 last:border-0 last:pb-0">
+                            <span class="font-bold text-blue-300 min-w-[150px]">Gallus (לטינית):</span>
+                            <span>תרנגול. חשוב לציין שבלטינית המילה "Gallus" משמעותה גם "גאלי" (תושב גאליה, היא צרפת הקדומה של ימי האימפריה הרומית). <strong>משחק מילים היסטורי זה</strong> הוא המקור האמיתי לאימוץ התרנגול כסמל הלאומי של העם הצרפתי.</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:gap-4 pb-3 border-b border-gray-800/50 last:border-0 last:pb-0">
+                            <span class="font-bold text-blue-300 min-w-[150px]">domesticus (לטינית):</span>
+                            <span>מבוית, שייך לבית (Domestic). מציין שמדובר במין שעבר תהליך של ביות על ידי האדם.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- רשת נתונים -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ב. שנות חיים</h4>
+                        <p class="text-gray-200">5 עד 10 שנים בממוצע בתנאי גידול נוחים וחופשיים.</p>
+                    </div>
+                    
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ג. גודל ומשקל</h4>
+                        <p class="text-gray-200">אורך: כ-65 עד 75 ס"מ (הזכר). משקל: 3.5 עד 4.5 ק"ג.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-200">דו-צורתיות זוויגית בולטת. הזכר גדול יותר, בעל כרבולת אדומה גדולה, דלדלים, נוצות זנב ארוכות וצבעוניות, וקריאת "קוקוריקו" רמה. הנקבה (תרנגולת) קטנה, מוסווית ושקטה יותר.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ו. שם בנגלה של הציפור</h4>
+                        <p class="text-gray-200">מורוג (Morog - מיוחס לזכר), מורגי (Murgi - מיוחס לנקבה).</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ז. שנת הגילוי</h4>
+                        <p class="text-gray-200">בוית לפני כ-8,000 עד 10,000 שנים. הגדרה מדעית רשמית (לינאוס): שנת 1758.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ט. תזונה</h4>
+                        <p class="text-gray-200">אוכל-כול (אומניבור). ניזון מזרעים, חרקים, תולעים, עשבים, ולעיתים אף לוכד זוחלים קטנים או עכברים.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ד. סיבת הבחירה</h4>
+                        <p class="text-gray-200">התרנגול מעולם לא הוכרז בחוק רשמי, אך אומץ כסמל עקב משחק המילים הלטיני "Gallus". מאז ימי הביניים, וביתר שאת במהפכה הצרפתית, הוא הפך לסמל של גאווה עממית, אומץ, ערנות והשכמה לעידן חדש ורפובליקני (כשם שהתרנגול מכריז על השחר).</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 rounded-2xl p-5 border border-gray-700/50">
+                        <h4 class="text-md font-bold text-gray-400 mb-2">ח. נסיבות הגילוי</h4>
+                        <p class="text-gray-200">המין מבוסס על "תרנגול הבנקיבה" (Red Junglefowl) שמקורו ביערות דרום-מזרח אסיה. הוא הובא לאירופה ולצרפת (גאליה) על ידי סוחרים עתיקים דרך המזרח התיכון ויוון. הוגדר טקסונומית על ידי קארולוס לינאוס בספרו המהפכני "מערכת הטבע".</p>
+                    </div>
+
+                    <div class="bg-blue-900/20 border border-blue-900/50 rounded-2xl p-6">
+                        <h4 class="text-lg font-bold text-blue-400 mb-2">י. מצב השימור</h4>
+                        <p class="text-gray-200 font-medium">ללא חשש (LC - Least Concern). התרנגול הוא העוף הנפוץ ביותר על פני כדור הארץ (מעל 20 מיליארד פרטים בעולם בכל רגע נתון) עקב תעשיית החקלאות והביות.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- פוטר -->
+    <footer class="py-6 border-t border-gray-800 bg-gray-900 mt-auto">
+        <div class="max-w-[1440px] mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>יוצר: רם | שנת יצירה: 2026 | נבנה בגיטהאב</p>
+        </div>
+    </footer>
+
+    <!-- חלון צף (Modal) לתמונה -->
+    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/90 items-center justify-center p-4 backdrop-blur-sm" onclick="closeModal()">
+        <div class="relative max-w-5xl w-full flex justify-center" onclick="event.stopPropagation()">
+            <!-- כפתור סגירה -->
+            <button onclick="closeModal()" class="absolute -top-12 right-0 p-2 text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-full transition-colors border border-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster.jpg/800px-Brown_Leghorn_rooster.jpg" alt="תרנגול גאלי" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-gray-700">
+            <div class="absolute bottom-4 left-0 right-0 text-center pointer-events-none">
+                <span class="bg-black/70 text-white px-4 py-2 rounded-full text-lg font-bold shadow-lg backdrop-blur-md">תרנגול גאלי - צרפת</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- סקריפט להפעלת החלון הצף -->
+    <script>
+        function openModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // מניעת גלילה של הרקע
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = ''; // החזרת גלילה
+        }
+
+        // סגירה בלחיצה על מקש ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
