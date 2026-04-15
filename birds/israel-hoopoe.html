@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דוכיפת - ישראל | מחקר היסטורי וזואולוגי מעמיק</title>
+    <title>דוכיפת - ישראל | מחקר היסטורי וזואולוגי מקיף ביותר</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,163 +29,211 @@
         .text-justify { text-align: justify; }
         .fade-in { animation: fadeIn 0.8s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        /* אופטימיזציה למסך S25 Ultra */
+        .glass-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-blur: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
 
-    <!-- סרגל ניווט סטטי -->
-    <header class="w-full bg-gray-900 border-b border-gray-800 shadow-md">
-        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- סרגל ניווט סטטי (נגלל עם הדף) -->
+    <header class="w-full bg-gray-900 border-b border-gray-800">
+        <div class="max-w-[1440px] mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group font-black text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-                חזרה לארכיון הראשי
+                חזרה לארכיון
             </a>
-            <span class="text-gray-500 text-sm hidden md:block italic">מחקר מאת רם - 2026</span>
+            <div class="flex flex-col items-end">
+                <span class="text-white font-bold text-lg">ארכיון הציפורים הלאומיות</span>
+                <span class="text-gray-500 text-xs italic">מחקר מאת רם • 2026</span>
+            </div>
         </div>
     </header>
 
-    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-8 lg:p-12">
+    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-10 lg:p-16">
         
-        <article class="bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-2xl">
+        <article class="bg-gray-800 rounded-[3rem] overflow-hidden border border-gray-700 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.8)]">
             
-            <!-- אזור תמונה מרכזי -->
-            <div class="relative h-72 sm:h-[500px] w-full cursor-pointer group" onclick="openModal()">
-                <img src="../images/israel-hoopoe.png" alt="דוכיפת" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-8 right-8">
-                    <div class="bg-blue-600/90 backdrop-blur-md px-6 py-2 rounded-full flex items-center gap-3 shadow-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        <span class="font-bold text-white">הגדל תמונה למחקר ויזואלי</span>
-                    </div>
+            <!-- אזור תמונה ראשי -->
+            <div class="relative h-80 sm:h-[600px] w-full cursor-pointer group" onclick="openModal()">
+                <img src="../images/israel-hoopoe.png" alt="דוכיפת" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2500ms]">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-95"></div>
+                <div class="absolute bottom-12 right-12 left-12">
+                    <h1 class="text-6xl sm:text-8xl font-black text-white tracking-tighter mb-4">דוכיפת</h1>
+                    <p class="text-blue-400 text-3xl font-light italic">Hoopoe • Israel</p>
                 </div>
             </div>
 
-            <div class="p-8 sm:p-14 space-y-12">
+            <div class="p-8 sm:p-24 space-y-24">
                 
-                <header class="border-b border-gray-700 pb-8">
-                    <h2 class="text-5xl sm:text-6xl font-black text-white mb-4 tracking-tighter">דוכיפת (Hoopoe)</h2>
-                    <div class="flex flex-wrap items-center gap-4 text-blue-400">
-                        <span class="text-2xl font-light italic">Upupa epops</span>
-                        <span class="h-1.5 w-1.5 rounded-full bg-gray-600"></span>
-                        <span class="text-xl font-bold uppercase tracking-widest">ישראל (Israel)</span>
-                    </div>
-                </header>
-
-                <!-- א. אטימולוגיה מורחבת ומעמיקה -->
+                <!-- א. אטימולוגיה מורחבת ומפורטת (הפרדה מלאה) -->
                 <section>
-                    <h4 class="text-2xl font-bold text-white mb-8 flex items-center gap-4">
-                        <span class="h-10 w-2 bg-blue-600 rounded-full"></span>
+                    <h4 class="text-4xl font-black text-white mb-12 flex items-center gap-5">
+                        <span class="h-16 w-3 bg-blue-600 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.6)]"></span>
                         א. אטימולוגיה (חקר השם המלא)
                     </h4>
-                    <div class="grid gap-6">
-                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
-                            <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם המדעי (לטינית ויוונית)</h5>
-                            <div class="space-y-4 text-gray-300">
-                                <p><strong class="text-white">Upupa (לטינית):</strong> זהו שם אונומטופאי (מחקה צליל). הוא מחקה באופן ישיר את קריאת החיזור הטריטוריאלית של הזכר, הנשמעת כ-"הוּפּ-הוּפּ-הוּפּ" עמום המהדהד למרחקים.</p>
-                                <p><strong class="text-white">epops (יוונית עתיקה):</strong> המילה ἔποψ ביוונית, שגם היא נובעת ככל הנראה מחיקוי צליל קריאתה של הציפור. במיתולוגיה היוונית, טראוס (Tereus) הפך לדוכיפת.</p>
+                    <div class="grid gap-12 text-right">
+                        <!-- השם העברי -->
+                        <div class="glass-card p-12 rounded-[3rem]">
+                            <h5 class="text-blue-300 font-black mb-8 border-b border-gray-800 pb-6 text-2xl uppercase tracking-widest">מקור השם העברי (Duchifat)</h5>
+                            <div class="space-y-8 text-gray-300 text-xl leading-relaxed text-justify">
+                                <p>הדוכיפת מופיעה בתורה (ויקרא י"א) כאחד העופות הטמאים למאכל. חקר השם העברי חושף שלוש תיאוריות מרכזיות:</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                                    <div class="bg-gray-950/80 p-8 rounded-3xl border border-blue-500/20 shadow-inner">
+                                        <span class="text-blue-400 font-black block mb-4 text-sm uppercase tracking-widest italic text-right">האקדמיה ללשון:</span>
+                                        <p class="text-xl font-medium">הלחם של המילים <strong class="text-white italic">"דו"</strong> (שתיים) ו-<strong class="text-white italic">"כיפת"</strong> (כיפה או כרבולת), על שום הציצית המרשימה שעל ראשה הנראית ככפולה כשהיא נפרסת.</p>
+                                    </div>
+                                    <div class="bg-gray-950/80 p-8 rounded-3xl border border-blue-500/20 shadow-inner">
+                                        <span class="text-blue-400 font-black block mb-4 text-sm uppercase tracking-widest italic text-right">פרשנות חז"ל:</span>
+                                        <p class="text-xl font-medium">במשנה (ברכות) מוסבר השם דרך השורש <strong class="text-white italic">ד.כ.פ</strong> - "שהודו כפות", או מלשון ניקור ("דוחף" את מקורו באדמה), המתאר את פעולת החיפוש אחר מזון בקרקע.</p>
+                                    </div>
+                                </div>
+                                <p class="pt-6 border-t border-gray-700 italic">שמות נוספים במקורות: "נגר טורא" (נגר ההר) בארמית, עקב יכולתה להבקיע אבנים בעזרת השמיר האגדי.</p>
                             </div>
                         </div>
 
-                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
-                            <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם העברי (שורשים מקראיים)</h5>
-                            <div class="space-y-4 text-gray-300 text-justify">
-                                <p><strong class="text-white">דוכיפת (עברית):</strong> מופיעה בתורה ברשימת העופות הטמאים (ויקרא י"א). לפי האקדמיה ללשון העברית, השם הוא הלחם של <span class="text-blue-200 italic">"דו"</span> (שתיים) ו-<span class="text-blue-200 italic">"כיפת"</span> (כרבולת/כיפה), על שום הציצית המרשימה שעל ראשה הנראית ככפולה כשהיא פרוסה.</p>
-                                <p><strong class="text-white">שורש ד.כ.פ:</strong> פירוש חז"ל (משנה ברכות) מקשר את השם לפעולת הניקור באדמה – <span class="text-blue-200 italic">"שהודו כפות"</span> או <span class="text-blue-200 italic">"דובפת"</span>, עוף שנובר ודוחף את מקורו בקרקע.</p>
+                        <!-- השם המדעי -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl">
+                                <h5 class="text-blue-300 font-bold mb-6 text-2xl tracking-tighter text-right">השורש המדעי: Upupa</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2">מקור: לטינית (אונומטופאי)</p>
+                                <p class="text-gray-300 text-lg leading-relaxed">שם המחקה באופן ישיר את צליל הקריאה הטריטוריאלית של הציפור בטבע: "הוּפּ-הוּפּ-הוּפּ". צליל זה מהדהד למרחקים ומהווה את סימן ההיכר הקולי שלה.</p>
+                            </div>
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-blue-300 font-bold mb-6 text-2xl tracking-tighter">הסיומת: epops</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2">מקור: יוונית עתיקה (ἔποψ)</p>
+                                <p class="text-gray-300 text-lg leading-relaxed">זהו השם היווני הקדום לדוכיפת. במיתולוגיה היוונית, טראוס (Tereus) מלך תראקיה הפך לדוכיפת כעונש על מעשיו, מה שמעיד על עתיקות זיהויה.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- נתונים ביולוגיים וזואולוגיים -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4">ב. שנות חיים</h4>
-                        <p class="text-gray-200 text-lg">בטבע, הדוכיפת חיה בממוצע בין <span class="text-blue-400 font-bold">8 ל-12 שנים</span>. בתנאי שבי מבוקרים היא עשויה להגיע לגיל 14.</p>
+                <!-- פרק רבייה ותפוצה (סעיפים יא-יד) - חדש ומורחב -->
+                <section class="bg-blue-900/10 border border-blue-900/30 rounded-[4rem] p-12 sm:p-20 shadow-[inset_0_0_50px_rgba(0,0,0,0.5)] text-right">
+                    <h4 class="text-4xl font-black text-blue-400 mb-16 tracking-[0.2em] uppercase text-center italic">ניתוח זואולוגי: רבייה ותפוצה</h4>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יא</span>
+                                כמות ביצים בכל הטלה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20">
+                                <p>הדוכיפת מטילה בממוצע בין <strong class="text-white text-2xl">5 ל-8 ביצים</strong> בכל מחזור. בתנאי מזון אופטימליים תועדו תטולות של עד 12 ביצים. הביצים הן בעלות גוון חלבי או ירקרק-תכלכל המשתנה לאפור במהלך הדגירה.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יב</span>
+                                תקופת הדגירה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20">
+                                <p>משך הדגירה נמשך בין <strong class="text-white text-2xl">15 ל-18 ימים</strong>. הנקבה היא הדוגרת היחידה, בזמן שהזכר אחראי באופן בלעדי על אספקת המזון אליה לקן. לאחר הבקיעה, שני ההורים משתתפים בהזנת הגוזלים.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יג</span>
+                                תפוצה גאוגרפית
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-justify text-right">
+                                <p>הדוכיפת היא בעלת תפוצה רחבה מאוד הכוללת את <strong class="text-white">אירופה, אסיה וצפון אפריקה</strong>. בישראל היא ציפור יציבה (כלל-שנתית) הנפוצה בכל רחבי הארץ, מהחרמון ועד אילת, אם כי היא מעדיפה שטחים פתוחים בקרבת מגורי אדם.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יד</span>
+                                האם המין מונוגמי?
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>הדוכיפת היא <strong class="text-white text-2xl">מונוגמית עונתית</strong>. בני הזוג נשארים יחד לאורך כל עונת הרבייה ומגדלים יחד את הדור הבא. עם זאת, הקשר הזוגי לרוב אינו נשמר בין עונות שנה שונות, וכל פרט עשוי למצוא בן זוג חדש בעונה הבאה.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- שאר הסעיפים (ב-י) ברמה מורחבת -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ב. שנות חיים</h4>
+                        <p class="text-gray-200 text-2xl leading-relaxed text-justify">בטבע, הדוכיפת חיה בממוצע בין <span class="text-blue-400 font-black">8 ל-12 שנים</span>. תנאי מחייה מודרניים בקרבת מדשאות וגינות מושקות משפרים את שרידותה, אך היא עדיין חשופה לטורפים כמו חתולי בית ודורסי יום.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4">ג. גודל ומשקל</h4>
-                        <div class="space-y-2 text-gray-200 text-lg">
-                            <p><strong>אורך גוף:</strong> 25 עד 32 ס"מ.</p>
-                            <p><strong>מוטת כנפיים:</strong> 44 עד 48 ס"מ.</p>
-                            <p><strong>משקל:</strong> נע בין 46 ל-90 גרם.</p>
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ג. גודל ומשקל</h4>
+                        <div class="space-y-6 text-gray-200 text-2xl">
+                            <p><strong>אורך גוף:</strong> 25 - 32 ס"מ.</p>
+                            <p><strong>מוטת כנפיים:</strong> 44 - 48 ס"מ.</p>
+                            <p><strong>משקל:</strong> 46 - 90 גרם.</p>
                         </div>
                     </section>
                 </div>
 
-                <!-- ד. סיבת הבחירה - מחקר היסטורי ולאומי -->
-                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20">
-                    <h4 class="text-gray-400 font-bold mb-6 flex items-center gap-3">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                        ד. סיבת הבחירה הלאומית (2008)
+                <section class="bg-gray-900/50 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-inner text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 flex items-center gap-5 text-3xl tracking-tighter">
+                        <span class="w-5 h-5 rounded-full bg-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.8)]"></span>
+                        ד. סיבת הבחירה והקשר לשלמה המלך
                     </h4>
-                    <div class="text-gray-300 space-y-4 text-justify">
-                        <p>הדוכיפת נבחרה לציפור הלאומית של ישראל במאי 2008, לרגל שנת ה-60 למדינה. הבחירה נעשתה באמצעות הצבעה דמוקרטית רחבה בה השתתפו כ-155,000 אזרחים. היא גברה על עופות כמו הנשר והבולבול.</p>
-                        <p>הסיבות לבחירה היו מגוונות: הדוכיפת היא ציפור <strong class="text-white">ייחודית במראה</strong> (הציצית והכנפיים המפוספסות), היא <strong class="text-white">מועילה לחקלאות</strong> (מדבירה מזיקים), והיא בעלת הקשרים עמוקים לתרבות היהודית. באגדות חז"ל, הדוכיפת (או "תרנגול הבר") מוזכרת כמי שהביאה את ה"שמיר" לשלמה המלך לבניית בית המקדש, עקב נאמנותה לשבועתה.</p>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose">
+                        <p>הדוכיפת נבחרה לציפור הלאומית של ישראל במאי 2008, לכבוד שנת ה-60 למדינה. היא גברה על הנשר והבולבול בהצבעה דמוקרטית שבה השתתפו מעל 150,000 איש. הסיבות היו יופייה הבלתי שגרתי, העובדה שאינה מזיקה לאדם והקשרים העמוקים למסורת.</p>
+                        <p>באגדות חז"ל, הדוכיפת מכונה "נגר טורא" – הציפור שהפקידה את ה<strong class="text-white">שמיר</strong> (יצור אגדי המבקע אבנים) בידי שלמה המלך לצורך בניית בית המקדש, ובכך הפכה לסמל של נאמנות לשבועה ולחוכמה.</p>
                     </div>
                 </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4">ה. הבדלים בין זכר ונקבה</h4>
-                        <p class="text-gray-300 leading-relaxed">הדוכיפת אינה מציגה דימורפיזם זוויגי בולט לעין אנושית. הזכר והנקבה דומים מאוד בניצוים. עם זאת, הזכרים נוטים להיות מעט גדולים יותר והצבע הכתום-ורדרד שלהם עז יותר בעונת הרבייה. הנקבה מתאפיינת בבלוטת שומן בבסיס הזנב המפרישה ריח דוחה בעונת הקינון כדי להגן על הקן מטורפים.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem]">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-300 text-xl leading-relaxed text-justify">הדוכיפת אינה מציגה דימורפיזם זוויגי בולט לעין אנושית. הזכר והנקבה דומים מאוד בצבעי הכתום-ורדרד, הכנפיים המפוספסות והציצית. עם זאת, הזכרים נוטים להיות מעט כבדים יותר ובעלי גוונים עזים יותר בעונת הרבייה. הנקבה מפרישה ריח דוחה מבלוטת שומן בזנבה כדי להגן על הקן.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4">ו. שם בנגלה של הציפור</h4>
-                        <p class="text-gray-300 text-2xl font-black">מופו / מוהונצ'ורה (Mohonchura - মোহনচূড়া)</p>
-                        <p class="text-xs text-gray-500 mt-2 tracking-widest italic text-justify uppercase font-mono">השם Mohonchura מתייחס ל"כתר המרהיב" שעל ראשה.</p>
-                    </section>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ז. שנת הגילוי (טקסונומיה)</h4>
-                        <p class="text-gray-300 text-3xl font-black tracking-tighter">1758</p>
-                        <p class="text-sm text-gray-500 italic mt-2">תוארה על ידי קארולוס לינאוס ב-"Systema Naturae".</p>
-                    </section>
-
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ט. תזונה</h4>
-                        <p class="text-gray-300">אוכלת חרקים (Insectivore). היא שולפת זחלים, צרצרים ועכבישים מהאדמה בעזרת מקורה הארוך. היא ידועה בשיטה המיוחדת שלה: היא מטיחה חרקים קשים באדמה כדי לשבור את השלד החיצוני שלהם לפני הבליעה.</p>
+                    <section class="glass-card p-12 rounded-[3rem]">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ו. שם בנגלה של הציפור</h4>
+                        <p class="text-gray-300 text-5xl font-black italic">מוהונצ'ורה (Mohonchura - মোহনচূড়া)</p>
+                        <p class="text-xs text-gray-500 mt-8 tracking-[0.4em] uppercase font-mono italic">פירוש השם בבנגלית מתייחס ל"כתר המרהיב" שעל ראשה.</p>
                     </section>
                 </div>
 
-                <!-- ח. נסיבות הגילוי ההיסטוריות -->
-                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20">
-                    <h4 class="text-gray-400 font-bold mb-4 text-xl">ח. נסיבות הגילוי והקשר למצרים העתיקה</h4>
-                    <div class="text-gray-300 space-y-4 text-justify">
-                        <p>הדוכיפת לא הייתה זקוקה ל"גילוי" במובן המודרני, שכן היא ליוותה את האדם משחר התרבות. היא נחשבה לקדושה במצרים העתיקה, שם עיטרו ציוריה קירות של קברים ומקדשים. היוונים ראו בה מלך הציפורים (כפי שמופיע במחזה "הציפורים" של אריסטופאנס). עבור הבוטניקאים והזואולוגים של המאה ה-18, היא היוותה חידה סיווגית בשל צורתה הייחודית שאינה דומה לשום משפחת ציפורים אחרת.</p>
+                <section class="bg-gray-900/60 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-2xl text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 text-3xl uppercase tracking-tighter text-center text-right">ח. נסיבות הגילוי והקשר למצרים העתיקה</h4>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose">
+                        <p>הדוכיפת ליוותה את האנושות משחר הציוויליזציה. במצרים העתיקה היא נחשבה לציפור קדושה וציוריה מעטרים קברים ומקדשים מהממלכה הקדומה. עבור הזואולוגים של המאה ה-18, היא היוותה חידה סיווגית בשל צורתה הייחודית ומשפחתה (Upupidae) שאינה כוללת שום מין דומה אחר בימינו.</p>
                     </div>
                 </section>
 
-                <!-- מצב שימור -->
-                <div class="bg-blue-900/20 border border-blue-800/40 rounded-[2rem] p-10 shadow-xl">
-                    <h4 class="text-2xl font-black text-blue-400 mb-4 tracking-tighter uppercase">י. מצב השימור</h4>
-                    <p class="text-gray-100 text-xl font-bold mb-4">ללא חשש (Least Concern - LC)</p>
-                    <p class="text-gray-300 leading-relaxed text-justify">בישראל, אוכלוסיית הדוכיפת יציבה ואף התרחבה בעשורים האחרונים בשל ריבוי המדשאות והגינות המושקות, המספקות לה שפע של מזון לאורך כל השנה. היא מוגנת על פי חוק להגנת חיית הבר.</p>
+                <div class="bg-blue-900/40 border border-blue-800/60 rounded-[4rem] p-16 shadow-2xl relative overflow-hidden text-right">
+                    <h4 class="text-4xl font-black text-blue-400 mb-10 tracking-tighter uppercase">י. מצב השימור</h4>
+                    <p class="text-gray-100 text-3xl font-black mb-8">ללא חשש (Least Concern - LC)</p>
+                    <p class="text-gray-300 text-justify italic leading-relaxed text-2xl">אוכלוסיית הדוכיפת בישראל ובעולם יציבה ואינה נמצאת בסכנת הכחדה. היא מוגנת על פי החוק להגנת חיית הבר בישראל.</p>
                 </div>
-
             </div>
-        </div>
+        </article>
     </main>
 
-    <footer class="py-12 border-t border-gray-800 bg-gray-950 text-center">
-        <p class="text-gray-500 text-sm font-medium">מחקר מעמיק ועיצוב עבור רם • 2026</p>
+    <footer class="py-24 border-t border-gray-800 bg-gray-950 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-gray-500 font-black tracking-[0.5em] uppercase text-sm mb-4">Hoopoe - Israel Research • Ram 2026</p>
+            <p class="text-gray-700 text-xs tracking-widest leading-relaxed">נבנה בטכנולוגיית בינה מלאכותית מתקדמת • מותאם אישית למכשיר Samsung S25 Ultra • סרגל ניווט סטטי</p>
+        </div>
     </footer>
 
     <!-- חלון צף (Modal) -->
-    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 items-center justify-center p-4 backdrop-blur-2xl transition-all duration-500 opacity-0" onclick="closeModal()">
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/99 items-center justify-center p-4 backdrop-blur-3xl transition-all duration-700 opacity-0" onclick="closeModal()">
         <div class="relative max-w-6xl w-full flex flex-col items-center p-4" onclick="event.stopPropagation()">
-            <button onclick="closeModal()" class="absolute -top-16 left-0 p-4 text-white bg-gray-800/50 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            <button onclick="closeModal()" class="absolute -top-24 left-0 p-6 text-white bg-gray-800/70 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90 active:scale-90">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <img src="../images/israel-hoopoe.png" alt="דוכיפת" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-gray-700/50 scale-95 transition-transform duration-500" id="modalImg">
-            <div class="mt-8 text-center">
-                <h5 class="text-3xl font-black text-white tracking-[0.2em] uppercase">Upupa epops</h5>
-                <p class="text-blue-400 font-bold">הציפור הלאומית של מדינת ישראל</p>
+            <img src="../images/israel-hoopoe.png" alt="דוכיפת" class="max-w-full max-h-[70vh] object-contain rounded-[4rem] shadow-[0_0_200px_rgba(59,130,246,0.4)] border border-gray-700 scale-90 transition-transform duration-700" id="modalImg">
+            <div class="mt-16 text-center space-y-6 text-right">
+                <h5 class="text-5xl font-black text-white tracking-[0.5em] uppercase italic">Upupa epops</h5>
+                <p class="text-blue-400 font-black tracking-[0.2em] uppercase text-2xl">הציפור הלאומית של ישראל • מחקר ויזואלי</p>
             </div>
         </div>
     </div>
@@ -196,7 +244,7 @@
             const img = document.getElementById('modalImg');
             m.classList.remove('hidden');
             m.classList.add('flex');
-            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-95'); }, 10);
+            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-90'); }, 20);
             document.body.style.overflow = 'hidden';
         }
         function closeModal() {
@@ -204,8 +252,8 @@
             const img = document.getElementById('modalImg');
             m.classList.remove('opacity-100');
             img.classList.remove('scale-100');
-            img.classList.add('scale-95');
-            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 500);
+            img.classList.add('scale-90');
+            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 600);
             document.body.style.overflow = '';
         }
         document.addEventListener('keydown', e => { if(e.key === "Escape") closeModal(); });
