@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+​<html lang="he" dir="rtl" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>קונדור האנדים - אקוודור | מחקר היסטורי וזואולוגי מעמיק</title>
+<script src="https://www.google.com/search?q=https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+darkMode: 'class',
+theme: {
+extend: {
+colors: {
+gray: { 850: '#1f2937', 900: '#111827', 950: '#030712' }
+}
+}
+}
+}
+</script>
+<style>
+body {
+font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+background-color: #030712;
+color: #f3f4f6;
+line-height: 1.8;
+}
+.text-justify { text-align: justify; }
+.fade-in { animation: fadeIn 0.8s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
