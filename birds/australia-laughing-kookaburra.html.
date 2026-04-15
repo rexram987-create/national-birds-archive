@@ -1,0 +1,272 @@
+```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קוקבורה צוחקת - אוסטרליה | מחקר היסטורי וזואולוגי מקיף ביותר</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: { 850: '#1f2937', 900: '#111827', 950: '#030712' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            line-height: 1.8;
+        }
+        .text-justify { text-align: justify; }
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        /* אופטימיזציה למסך S25 Ultra */
+        .glass-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-blur: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
+
+    <!-- סרגל ניווט סטטי (נגלל עם הדף) -->
+    <header class="w-full bg-gray-900 border-b border-gray-800">
+        <div class="max-w-[1440px] mx-auto px-6 h-24 flex items-center justify-between text-right">
+            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group font-black text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+                חזרה לארכיון
+            </a>
+            <div class="flex flex-col items-end">
+                <span class="text-white font-bold text-lg">ארכיון הציפורים הלאומיות</span>
+                <span class="text-gray-500 text-xs italic">מחקר מאת רם • 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-10 lg:p-16 text-right">
+        
+        <article class="bg-gray-800 rounded-[3rem] overflow-hidden border border-gray-700 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.8)]">
+            
+            <!-- אזור תמונה ראשי -->
+            <div class="relative h-80 sm:h-[600px] w-full cursor-pointer group" onclick="openModal()">
+                <img src="../images/australia-laughing-kookaburra.png" alt="קוקבורה צוחקת" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2500ms]">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-95"></div>
+                <div class="absolute bottom-12 right-12 left-12">
+                    <h1 class="text-6xl sm:text-8xl font-black text-white tracking-tighter mb-4">הקוקבורה הצוחקת</h1>
+                    <p class="text-blue-400 text-3xl font-light italic">Laughing Kookaburra • Australia</p>
+                </div>
+            </div>
+
+            <div class="p-8 sm:p-24 space-y-24">
+                
+                <!-- א. אטימולוגיה מורחבת (הפרדה מלאה) -->
+                <section>
+                    <h4 class="text-4xl font-black text-white mb-12 flex items-center gap-5 text-right">
+                        <span class="h-16 w-3 bg-blue-600 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.6)]"></span>
+                        א. אטימולוגיה (חקר השם המלא)
+                    </h4>
+                    <div class="grid gap-12 text-right">
+                        <!-- השם העממי והילידי -->
+                        <div class="glass-card p-12 rounded-[3rem]">
+                            <h5 class="text-blue-300 font-black mb-8 border-b border-gray-700 pb-6 text-2xl uppercase tracking-widest text-right">המקור הילידי: guuguubarra</h5>
+                            <div class="space-y-8 text-gray-300 text-xl leading-relaxed text-justify">
+                                <p>שמה של הציפור הוא מחווה קולית למקורותיה האבוריג'ינים העתיקים:</p>
+                                <div class="bg-gray-950/80 p-8 rounded-3xl border border-blue-500/20 shadow-inner">
+                                    <span class="text-blue-400 font-black block mb-4 text-sm uppercase tracking-widest italic text-right">שפת הוויראדג'ורי (Wiradjuri):</span>
+                                    <p class="text-xl font-medium">המילה <strong class="text-white italic">"Kookaburra"</strong> היא גרסה אנגלית למילה <strong class="text-white italic text-justify">"guuguubarra"</strong>. זהו שם אונומטופאי (מחקה צליל) המחקה את ה"צחוק" המפורסם של הציפור. עבור הילידים, קול זה היה שעון מעורר טבעי, והם כינו אותה "השעון של המתיישבים".</p>
+                                </div>
+                                <p class="pt-6 border-t border-gray-700 italic">התואר "צוחקת" נוסף כדי להבדיל אותה מהקוקבורה כחולת-הכנף שקולה שונה לחלוטין.</p>
+                            </div>
+                        </div>
+
+                        <!-- השם המדעי -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-blue-300 font-bold mb-6 text-2xl tracking-tighter">הסוג: Dacelo</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2">מקור: אנגרמה (שיכול אותיות)</p>
+                                <p class="text-gray-300 text-lg leading-relaxed text-right">השם <strong class="text-white italic">Dacelo</strong> הוא אנגרמה של המילה <strong class="text-white italic text-justify">Alcedo</strong> – השם הלטיני למשפחת השלדגים. הקוקבורה היא השלדג הגדול בעולם, והשם נוצר כדי להדגיש את הקשר המשפחתי למרות הגודל החריג.</p>
+                            </div>
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-blue-300 font-bold mb-6 text-2xl tracking-tighter">המין: novaeguineae</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2 text-right">מקור: טעות גאוגרפית</p>
+                                <p class="text-gray-300 text-lg leading-relaxed text-right">פירושו "מגינאה החדשה". שם זה ניתן בטעות על ידי חוקר הטבע הרמן זונר ב-1783, שחשב שהציפור הגיעה משם, בעוד שהיא למעשה אנדמית ליבשת אוסטרליה בלבד.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- פרק רבייה ותפוצה (סעיפים יא-יד) - חדש ומורחב -->
+                <section class="bg-blue-900/10 border border-blue-900/30 rounded-[4rem] p-12 sm:p-20 shadow-[inset_0_0_50px_rgba(0,0,0,0.5)]">
+                    <h4 class="text-4xl font-black text-blue-400 mb-16 tracking-[0.2em] uppercase text-center italic">ניתוח זואולוגי: רבייה ותפוצה</h4>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 text-right text-right">
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)] text-right">יא</span>
+                                כמות ביצים בכל הטלה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>הקוקבורה מטילה בדרך כלל <strong class="text-white text-2xl">2 עד 4 ביצים</strong> לבנות ובוהקות בכל מחזור רבייה. הביצים מוטלות במרווחים של יומיים זו מזו בתוך חללי עצים טבעיים או בקיני טרמיטים נטושים.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)] text-right">יב</span>
+                                תקופת הדגירה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>משך הדגירה נמשך בין <strong class="text-white text-2xl">24 ל-26 ימים</strong>. מלאכת הדגירה משותפת לכל בני המשפחה – ההורים וה"עוזרים" (הצאצאים מהשנה הקודמת), מה שמבטיח הגנה מקסימלית על הביצים.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)] text-right text-right">יג</span>
+                                תפוצה גאוגרפית
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-justify text-right text-right">
+                                <p>הקוקבורה הצוחקת אנדמית ל<strong class="text-white">מזרח ודרום-מזרח אוסטרליה</strong>. היא הובאה על ידי האדם גם למערב אוסטרליה, טסמניה וניו זילנד. היא נפוצה ביערות אקליפטוס פתוחים, אך מסתגלת היטב גם לפארקים עירוניים וגינות פרטיות.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)] text-right">יד</span>
+                                מבנה חברתי: מונוגמיה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>הקוקבורה היא מין <strong class="text-white text-2xl">מונוגמי לכל החיים</strong>. בני הזוג נשארים בטריטוריה שלהם לאורך כל השנה ומנהלים מערכת חברתית מורכבת של "רבייה שיתופית" (Cooperative Breeding), שבה הצאצאים הבוגרים נשארים בקן כדי לעזור בגידול האחים הצעירים.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- שאר הסעיפים (ב-י) ברמה מורחבת -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ב. שנות חיים</h4>
+                        <p class="text-gray-200 text-2xl leading-relaxed text-justify text-right">הקוקבורה היא ציפור מאריכת חיים. בטבע היא חיה בממוצע בין <span class="text-blue-400 font-black text-right">15 ל-20 שנים</span>. בשבי תועדו מקרים של פרטים שהגיעו לגיל 25 שנה, הודות למבנה החברתי החזק המגן עליהן.</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl text-right text-right">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic text-right">ג. גודל ומשקל</h4>
+                        <div class="space-y-6 text-gray-200 text-2xl text-right">
+                            <p><strong>אורך גוף:</strong> 39 - 45 ס"מ.</p>
+                            <p><strong>מוטת כנפיים:</strong> 56 - 66 ס"מ.</p>
+                            <p><strong>משקל:</strong> 300 - 450 גרם.</p>
+                            <p class="text-sm text-gray-500 italic text-right">זהו המין הגדול ביותר במשפחת השלדגיים.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="bg-gray-900/50 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-inner text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 flex items-center gap-5 text-3xl tracking-tighter text-right">
+                        <span class="w-5 h-5 rounded-full bg-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.8)] text-right"></span>
+                        ד. סיבת הבחירה כסמל לאומי (אוסטרליה)
+                    </h4>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose text-right">
+                        <p>הקוקבורה היא אחת הציפורים האהובות ביותר באוסטרליה ומייצגת את ה<strong class="text-white uppercase tracking-tighter text-2xl text-justify">חוסן וההומור</strong> של היבשת. היא נבחרה משום שהיא חלק בלתי נפרד מהפולקלור האוסטרלי ומהשירים העממיים. הקוקבורה שימשה כאחד הקמעות הרשמיים של אולימפיאדת סידני 2000 (הקוקבורה "אולי").</p>
+                        <p>בחירתה מסמלת את הקשר שבין האומה המודרנית לטבע הייחודי של היבשת. קולה הבוקע עם שחר ובשקיעה נתפס כצליל המגדיר של ה"אאוטבק" האוסטרלי.</p>
+                    </div>
+                </section>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] text-right">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-300 text-xl leading-relaxed text-justify text-right">דימורפיזם זוויגי עדין ביותר: הזכרים והנקבות נראים כמעט זהים בניצוי הלבן-חום שלהם. ההבדל היחיד הוא ב<strong class="text-white">כתם הכחול</strong> על הכנפיים, שנוטה להיות עז ובולט יותר אצל הזכרים. הנקבות לרוב מעט גדולות וכבדות יותר מהזכרים.</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] text-right text-right">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ו. שם בנגלה של הציפור</h4>
+                        <p class="text-gray-300 text-5xl font-black italic text-right">לפינג קוקבורה (ল্যাফিং কুকাবুরা)</p>
+                        <p class="text-xs text-gray-500 mt-8 tracking-[0.4em] uppercase font-mono italic text-right">תעתיק פונטי לשם האנגלי בשפה הבנגלית.</p>
+                    </section>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right text-right">
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg text-right">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter text-right">ז. שנת הגילוי (טקסונומיה)</h4>
+                        <p class="text-gray-300 text-5xl font-black tracking-tighter text-right">1783</p>
+                        <p class="text-sm text-gray-500 italic mt-4 text-right">הוגדרה מדעית על ידי חוקר הטבע הגרמני יוהאן הרמן.</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg text-right text-right text-right">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter text-right">ט. תזונה</h4>
+                        <p class="text-gray-300 text-lg leading-relaxed text-justify text-right text-right">טורף אופורטוניסט. ניזונה מחרקים גדולים, לטאות, נחשים (כולל ארסיים), עכברים וגוזלים של ציפורים אחרות. היא ידועה בשיטת הציד שלה: חבטת הטרף בעוצמה כנגד ענף עץ כדי להרוג אותו לפני הבליעה.</p>
+                    </section>
+                </div>
+
+                <section class="bg-gray-900/60 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-2xl text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 text-3xl uppercase tracking-tighter text-center text-right text-right text-right">ח. נסיבות הגילוי ההיסטוריות</h4>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose text-right text-right">
+                        <p>הקוקבורה הייתה ידועה למתיישבים האירופאים הראשונים באוסטרליה כבר במאה ה-18. הצליל המרתק שלה הוביל לתיאורים מלאי פליאה ביומני מסע, כשלעיתים המתיישבים החדשים חשבו שמדובר בצחוק של שדים או רוחות ביער. היא הפכה מהר מאוד לאחד הסמלים הוויזואליים והקוליים המזוהים ביותר עם ה"בוש" (Bush) האוסטרלי.</p>
+                    </div>
+                </section>
+
+                <div class="bg-blue-900/40 border border-blue-800/60 rounded-[4rem] p-16 shadow-2xl relative overflow-hidden text-right text-right">
+                    <h4 class="text-4xl font-black text-blue-400 mb-10 tracking-tighter uppercase text-right text-right">י. מצב השימור</h4>
+                    <p class="text-gray-100 text-3xl font-black mb-8 text-right text-right">ללא חשש (Least Concern - LC)</p>
+                    <p class="text-gray-300 text-justify italic leading-relaxed text-2xl text-right text-right">אוכלוסיית הקוקבורה יציבה ונפוצה מאוד. היא מוגנת על פי חוק באוסטרליה, ומסתגלת היטב לשינויים בסביבת המחייה שלה, כל עוד נשמרים עצי אקליפטוס עתיקים המספקים חללי קינון.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="py-24 border-t border-gray-800 bg-gray-950 text-center">
+        <div class="max-w-4xl mx-auto px-6 text-center text-center">
+            <p class="text-gray-500 font-black tracking-[0.5em] uppercase text-sm mb-6 text-center">Laughing Kookaburra - Australia Research • Ram 2026</p>
+            <p class="text-gray-700 text-xs tracking-widest leading-relaxed">נבנה בטכנולוגיית בינה מלאכותית מתקדמת • מותאם אישית למכשיר Samsung S25 Ultra • סרגל ניווט סטטי לשיפור חוויית הקריאה</p>
+        </div>
+    </footer>
+
+    <!-- חלון צף (Modal) -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/99 items-center justify-center p-4 backdrop-blur-3xl transition-all duration-700 opacity-0 text-right" onclick="closeModal()">
+        <div class="relative max-w-6xl w-full flex flex-col items-center p-4 text-right" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute -top-24 left-0 p-6 text-white bg-gray-800/70 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90 active:scale-90 text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <img src="../images/australia-laughing-kookaburra.png" alt="קוקבורה צוחקת" class="max-w-full max-h-[70vh] object-contain rounded-[4rem] shadow-[0_0_200px_rgba(59,130,246,0.4)] border border-gray-700 scale-90 transition-transform duration-700" id="modalImg">
+            <div class="mt-16 text-center space-y-6 text-right">
+                <h5 class="text-5xl font-black text-white tracking-[0.5em] uppercase italic text-right">Dacelo novaeguineae</h5>
+                <p class="text-blue-400 font-black tracking-[0.3em] uppercase text-2xl text-right">הציפור הלאומית (לא-רשמית) של אוסטרליה • מחקר ויזואלי</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            const m = document.getElementById('imageModal');
+            const img = document.getElementById('modalImg');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-90'); }, 20);
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            const m = document.getElementById('imageModal');
+            const img = document.getElementById('modalImg');
+            m.classList.remove('opacity-100');
+            img.classList.remove('scale-100');
+            img.classList.add('scale-90');
+            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 600);
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if(e.key === "Escape") closeModal(); });
+    </script>
+</body>
+</html>
+
+```
