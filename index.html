@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ארכיון הציפורים הלאומיות</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,10 +26,10 @@
             color: #f3f4f6;
         }
         html { scroll-behavior: smooth; }
-        .bird-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bird-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
         .bird-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(59,130,246,0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.3);
         }
     </style>
 </head>
@@ -45,123 +45,124 @@
                 <h1 class="text-xl font-bold text-white tracking-tight">ארכיון הציפורים הלאומיות</h1>
             </div>
             <nav class="flex gap-4">
-                <a href="index.html" class="px-3 py-2 rounded-md bg-gray-800 text-white transition-colors">ראשי</a>
-                <a href="about.html" class="px-3 py-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">אודות</a>
+                <a href="index.html" class="px-4 py-2 rounded-xl bg-gray-800 text-white font-bold transition-all shadow-lg border border-gray-700">ראשי</a>
+                <a href="about.html" class="px-4 py-2 rounded-xl text-gray-400 hover:text-white hover:bg-gray-800 transition-all">אודות</a>
             </nav>
         </div>
     </header>
 
-    <main class="flex-grow max-w-[1440px] mx-auto w-full p-4 sm:p-10 lg:p-12">
-        <div class="mb-12 text-center sm:text-right">
-            <h2 class="text-4xl sm:text-6xl font-black text-white mb-6 leading-tight tracking-tighter">הסמלים המעופפים של העולם</h2>
-            <p class="text-gray-400 text-xl max-w-3xl leading-relaxed italic">היסטוריה, זואולוגיה וסמליות לאומית • מאת רם, 2026</p>
+    <main class="flex-grow max-w-[1440px] mx-auto w-full p-4 sm:p-12 lg:p-16">
+        <div class="mb-14 text-center sm:text-right">
+            <h2 class="text-4xl sm:text-7xl font-black text-white mb-6 leading-none tracking-tighter">הסמלים המעופפים של העולם</h2>
+            <p class="text-gray-400 text-xl sm:text-2xl max-w-3xl leading-relaxed italic">מחקר היסטורי וזואולוגי מקיף • מאת רם, 2026</p>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <!-- רשת הציפורים המלאה (7 כרטיסיות) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
             
-            <!-- דודו (מאוריציוס) - הקישור סונכרן ל-lowercase למניעת 404 -->
-            <a href="birds/mauritius-dodo.html" class="bird-card group block relative bg-gray-800 rounded-[2rem] overflow-hidden border border-gray-700 shadow-xl">
+            <!-- 1. דודו - מאוריציוס -->
+            <a href="birds/mauritius-dodo.html" class="bird-card group block relative bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-xl">
                 <div class="aspect-[4/3] overflow-hidden">
-                    <img src="images/mauritius-dodo.png" alt="דודו" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <img src="images/mauritius-dodo.png" alt="דודו" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">דודו</h3>
-                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50">מאוריציוס</span>
+                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-tighter">מאוריציוס</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">הציפור שנכחדה והפכה לסמל השימור העולמי ולמצפון הסביבתי של האנושות.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">הציפור שנכחדה והפכה למצפון הסביבתי של העולם.</p>
                 </div>
             </a>
 
-            <!-- קונדור האנדים (אקוודור) -->
-            <a href="birds/ecuador-andean-condor.html" class="bird-card group block relative bg-gray-800 rounded-[2rem] overflow-hidden border border-gray-700 shadow-xl">
+            <!-- 2. תוכי הסיסרו - דומיניקה -->
+            <a href="birds/dominica-sisserou-parrot.html" class="bird-card group block relative bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-xl">
                 <div class="aspect-[4/3] overflow-hidden">
-                    <img src="images/ecuador-andean-condor.png" alt="קונדור" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <img src="images/dominica-sisserou-parrot.png" alt="תוכי" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">קונדור האנדים</h3>
-                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50">אקוודור</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">שליט הפסגות הגבוהות ביותר של הרי האנדים וסמל לחופש ריבוני מוחלט.</p>
-                </div>
-            </a>
-
-            <!-- תוכי הסיסרו (דומיניקה) -->
-            <a href="birds/dominica-sisserou-parrot.html" class="bird-card group block relative bg-gray-800 rounded-[2rem] overflow-hidden border border-gray-700 shadow-xl">
-                <div class="aspect-[4/3] overflow-hidden">
-                    <img src="images/dominica-sisserou-parrot.png" alt="תוכי" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">תוכי הסיסרו</h3>
-                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50">דומיניקה</span>
+                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-tighter">דומיניקה</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">התוכי האימפריאלי המרהיב, הנחשב לאחד העופות הנדירים והמוגנים ביותר בקריביים.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">התוכי האימפריאלי הנדיר, אנדמי להרי הגשם של האי.</p>
                 </div>
             </a>
 
-            <!-- עיט סלאדין (מצרים) -->
-            <a href="birds/egypt-eagle-of-saladin.html" class="bird-card group block relative bg-gray-800 rounded-[2rem] overflow-hidden border border-gray-700 shadow-xl">
+            <!-- 3. קונדור האנדים - אקוודור -->
+            <a href="birds/ecuador-andean-condor.html" class="bird-card group block relative bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-xl">
                 <div class="aspect-[4/3] overflow-hidden">
-                    <img src="images/egypt-eagle-of-saladin.png" alt="עיט סלאדין" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <img src="images/ecuador-andean-condor.png" alt="קונדור" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">קונדור האנדים</h3>
+                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-tighter">אקוודור</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">שליט הפסגות והעוף הדורס הגדול בתבל.</p>
+                </div>
+            </a>
+
+            <!-- 4. עיט סלאדין - מצרים -->
+            <a href="birds/egypt-eagle-of-saladin.html" class="bird-card group block relative bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-xl">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img src="images/egypt-eagle-of-saladin.png" alt="עיט סלאדין" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">עיט סלאדין</h3>
-                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50">מצרים</span>
+                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-tighter">מצרים</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">סמל השושלת האיובּית המקשר את מצרים המודרנית לתהילת העבר ולצלאח א-דין.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">סמל הריבונות והגאווה ההיסטורית של מצרים.</p>
                 </div>
             </a>
 
-            <!-- תרנגול גאלי (צרפת) -->
-            <a href="birds/france-gallic-rooster.html" class="bird-card group block relative bg-gray-800 rounded-[2rem] overflow-hidden border border-gray-700 shadow-xl">
+            <!-- 5. תרנגול גאלי - צרפת -->
+            <a href="birds/france-gallic-rooster.html" class="bird-card group block relative bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-xl">
                 <div class="aspect-[4/3] overflow-hidden">
-                    <img src="images/france-gallic-rooster.png" alt="תרנגול" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <img src="images/france-gallic-rooster.png" alt="תרנגול" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">תרנגול גאלי</h3>
-                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50">צרפת</span>
+                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-tighter">צרפת</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">סמל הגאווה והעוררות הצרפתית, המבוסס על משחק מילים לטיני עתיק.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">סמל העוררות והגאווה העממית הצרפתית.</p>
                 </div>
             </a>
 
-            <!-- דוכיפת (ישראל) -->
-            <a href="birds/israel-hoopoe.html" class="bird-card group block relative bg-gray-800 rounded-[2rem] overflow-hidden border border-gray-700 shadow-xl">
+            <!-- 6. דוכיפת - ישראל -->
+            <a href="birds/israel-hoopoe.html" class="bird-card group block relative bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-xl">
                 <div class="aspect-[4/3] overflow-hidden">
-                    <img src="images/israel-hoopoe.png" alt="דוכיפת" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <img src="images/israel-hoopoe.png" alt="דוכיפת" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">דוכיפת</h3>
-                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50">ישראל</span>
+                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-tighter">ישראל</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">נבחרה בשנת ה-60 למדינה. ציפור בעלת שורשים מקראיים וכתר נוצות מפואר.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">ציפור בעלת כתר נוצות מרהיב ושורשים מקראיים עמוקים.</p>
                 </div>
             </a>
 
-            <!-- עיט קירח (ארצות הברית) -->
-            <a href="birds/usa-bald-eagle.html" class="bird-card group block relative bg-gray-800 rounded-[2rem] overflow-hidden border border-gray-700 shadow-xl">
+            <!-- 7. עיט קירח - ארצות הברית -->
+            <a href="birds/usa-bald-eagle.html" class="bird-card group block relative bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-xl">
                 <div class="aspect-[4/3] overflow-hidden">
-                    <img src="images/usa-bald-eagle.png" alt="עיט קירח" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <img src="images/usa-bald-eagle.png" alt="עיט" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">עיט קירח</h3>
-                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50">ארה"ב</span>
+                        <span class="bg-blue-900/40 text-blue-400 text-xs font-black px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-tighter">ארה"ב</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">סמל החירות והריבונות האמריקאית. העיט בעל הראש הלבן הייחודי ליבשת.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">סמל החירות והעוצמה הריבונית של האומה האמריקאית.</p>
                 </div>
             </a>
 
         </div>
     </main>
 
-    <footer class="py-12 border-t border-gray-800 bg-gray-900 text-center">
-        <p class="text-gray-500 text-sm font-medium">ארכיון הציפורים הלאומיות • נבנה על ידי רם • 2026</p>
+    <footer class="py-16 border-t border-gray-800 bg-gray-900 text-center">
+        <p class="text-gray-500 font-bold tracking-widest uppercase">National Birds Archive • Ram 2026</p>
     </footer>
 
 </body>
