@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>קונדור האנדים - אקוודור | מחקר היסטורי וזואולוגי מעמיק</title>
+    <title>קונדור האנדים - אקוודור | מחקר היסטורי וזואולוגי מקיף ביותר</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,156 +29,218 @@
         .text-justify { text-align: justify; }
         .fade-in { animation: fadeIn 0.8s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        /* אופטימיזציה למסך S25 Ultra */
+        .glass-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-blur: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
 
-    <header class="w-full bg-gray-900 border-b border-gray-800 shadow-md">
-        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- סרגל ניווט סטטי (נגלל עם הדף) -->
+    <header class="w-full bg-gray-900 border-b border-gray-800">
+        <div class="max-w-[1440px] mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group font-black text-xl text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-                חזרה לארכיון הראשי
+                חזרה לארכיון
             </a>
-            <span class="text-gray-500 text-sm hidden md:block italic tracking-widest uppercase font-bold">Andean Condor Research</span>
+            <div class="flex flex-col items-end">
+                <span class="text-white font-bold text-lg text-right">ארכיון הציפורים הלאומיות</span>
+                <span class="text-gray-500 text-xs italic text-right">מחקר מאת רם • 2026</span>
+            </div>
         </div>
     </header>
 
-    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-8 lg:p-12">
-        <article class="bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-2xl">
+    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-10 lg:p-16">
+        
+        <article class="bg-gray-800 rounded-[3rem] overflow-hidden border border-gray-700 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.8)]">
             
-            <!-- אזור תמונה מרכזי -->
-            <div class="relative h-72 sm:h-[500px] w-full cursor-pointer group" onclick="openModal()">
-                <img src="../images/ecuador-andean-condor.png" alt="קונדור האנדים" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-8 right-8 text-white">
-                    <div class="bg-blue-600/90 backdrop-blur-md px-6 py-2 rounded-full flex items-center gap-3 shadow-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        <span class="font-bold uppercase tracking-widest">הגדל תמונה למחקר ויזואלי</span>
-                    </div>
+            <!-- אזור תמונה ראשי -->
+            <div class="relative h-80 sm:h-[600px] w-full cursor-pointer group" onclick="openModal()">
+                <img src="../images/ecuador-andean-condor.png" alt="קונדור האנדים" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2500ms]">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-95"></div>
+                <div class="absolute bottom-12 right-12 left-12">
+                    <h1 class="text-6xl sm:text-8xl font-black text-white tracking-tighter mb-4 text-right">קונדור האנדים</h1>
+                    <p class="text-blue-400 text-3xl font-light italic text-right">Andean Condor • Ecuador</p>
                 </div>
             </div>
 
-            <div class="p-8 sm:p-14 space-y-12">
+            <div class="p-8 sm:p-24 space-y-24">
                 
-                <header class="border-b border-gray-700 pb-8">
-                    <h2 class="text-5xl sm:text-6xl font-black text-white mb-4 tracking-tighter">קונדור האנדים (Andean Condor)</h2>
-                    <div class="flex flex-wrap items-center gap-4 text-blue-400">
-                        <span class="text-2xl font-light italic">Vultur gryphus</span>
-                        <span class="h-1.5 w-1.5 rounded-full bg-gray-600"></span>
-                        <span class="text-xl font-bold uppercase tracking-widest">אקוודור (Ecuador)</span>
-                    </div>
-                </header>
-
-                <!-- א. אטימולוגיה מורחבת ומעמיקה -->
-                <section id="etymology">
-                    <h4 class="text-2xl font-bold text-white mb-8 flex items-center gap-4">
-                        <span class="h-10 w-2 bg-blue-600 rounded-full"></span>
+                <!-- א. אטימולוגיה מורחבת (הפרדה מלאה) -->
+                <section>
+                    <h4 class="text-4xl font-black text-white mb-12 flex items-center gap-5 text-right">
+                        <span class="h-16 w-3 bg-blue-600 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.6)]"></span>
                         א. אטימולוגיה (חקר השם המלא)
                     </h4>
-                    <div class="grid gap-6">
-                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
-                            <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם המדעי: Vultur gryphus</h5>
-                            <div class="space-y-4 text-gray-300">
-                                <p><strong class="text-white">Vultur (לטינית):</strong> פירושו הישיר הוא "נשר". נגזר מהשורש <span class="italic">vulturus</span> שמשמעו "קורע" או "בוזז", המתאר את התנהגות האכילה של העוף הדורס המפרק נבלות בטבע.</p>
-                                <p><strong class="text-white">gryphus (יוונית עתיקה):</strong> נגזר מהמילה <span class="italic">gryps</span> המציינת את ה"גריפון" המיתולוגי – יצור בעל גוף אריה וראש עיט. השם ניתן לו בשל המקור המעוקל והעצום שלו המזכיר את היצור האגדי.</p>
+                    <div class="grid gap-12 text-right">
+                        <!-- השם העממי והילידי -->
+                        <div class="glass-card p-12 rounded-[3rem]">
+                            <h5 class="text-blue-300 font-black mb-8 border-b border-gray-700 pb-6 text-2xl uppercase tracking-widest text-right">השורש הילידי: kuntur</h5>
+                            <div class="space-y-8 text-gray-300 text-xl leading-relaxed text-justify">
+                                <p>מקור השם "קונדור" אינו אירופאי, אלא נטוע עמוק בשפות הילידיות של הרי האנדים:</p>
+                                <div class="bg-gray-950/80 p-8 rounded-3xl border border-blue-500/20 shadow-inner">
+                                    <span class="text-blue-400 font-black block mb-4 text-sm uppercase tracking-widest italic text-right">שפת הקצ'ואה (Quechua):</span>
+                                    <p class="text-xl font-medium">המילה המקורית היא <strong class="text-white italic">"kuntur"</strong>. עבור תרבות האינקה, הקונדור לא היה רק עוף, אלא יישות אלוהית המקשרת בין העולם הזה לעולם העליון (Hanan Pacha). השם אומץ על ידי הכובשים הספרדים ובוטא כ-"Cóndor".</p>
+                                </div>
+                                <p class="pt-6 border-t border-gray-700 italic">בתרבויות האנדים, השם מסמל "חירות אינסופית" ו"שליח האלים".</p>
                             </div>
                         </div>
 
-                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
-                            <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם העממי: Condor</h5>
-                            <div class="space-y-4 text-gray-300 text-justify">
-                                <p><strong class="text-white">kuntur (קצ'ואה):</strong> מקור המילה בשפת האינקה המקורית. עבור הילידים באנדים, הקונדור לא היה רק עוף, אלא יישות רוחנית עליונה השולטת ב-"Hanan Pacha" (העולם העליון/השמיים). הספרדים שיבשו את המילה ל-"Condor" במהלך הכיבוש.</p>
+                        <!-- השם המדעי -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-blue-300 font-bold mb-6 text-2xl tracking-tighter">הסוג: Vultur</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2">מקור: לטינית</p>
+                                <p class="text-gray-300 text-lg leading-relaxed text-right">נגזר מהמילה הלטינית <strong class="text-white italic">Vulturus</strong>, שמשמעותה "נשר" או "קורע". השם מתייחס לאופי התזונה של העוף כמפרק נבלות בעזרת מקורו המסיבי.</p>
+                            </div>
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-blue-300 font-bold mb-6 text-2xl tracking-tighter">המין: gryphus</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2 text-right">מקור: יוונית עתיקה</p>
+                                <p class="text-gray-300 text-lg leading-relaxed text-right">נגזר מהמילה <strong class="text-white italic">Gryps</strong> המציינת את ה"גריפון" המיתולוגי. השם ניתן לו בשל המקור המעוקל והמבנה הגופני העצום שמזכיר את היצור האגדי.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- נתונים ביולוגיים וזואולוגיים -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4 italic">ב. שנות חיים</h4>
-                        <p class="text-gray-200 text-lg">הקונדור נחשב לאחד העופות מאריכי החיים ביותר בעולם. בטבע הוא חי בין <span class="text-blue-400 font-bold">50 ל-60 שנה</span>, ובשבי תועדו פרטים שהגיעו לגיל המדהים של <span class="text-blue-400 font-bold">75 שנים</span> ומעלה.</p>
+                <!-- פרק רבייה ותפוצה (סעיפים יא-יד) - חדש ומורחב -->
+                <section class="bg-blue-900/10 border border-blue-900/30 rounded-[4rem] p-12 sm:p-20 shadow-[inset_0_0_50px_rgba(0,0,0,0.5)] text-right">
+                    <h4 class="text-4xl font-black text-blue-400 mb-16 tracking-[0.2em] uppercase text-center italic">ניתוח זואולוגי: רבייה ותפוצה</h4>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יא</span>
+                                כמות ביצים בכל הטלה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>לקונדור האנדים אחד משיעורי הרבייה הנמוכים בעולם העופות. הנקבה מטילה <strong class="text-white text-2xl">ביצה אחת בלבד</strong> בכל מחזור רבייה המתרחש פעם בשנתיים. הביצה מוטלת על מדפי סלע חשופים בגובה רב.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יב</span>
+                                תקופת הדגירה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>משך הדגירה ארוך במיוחד ונמשך בין <strong class="text-white text-2xl">54 ל-60 ימים</strong>. שני ההורים חולקים את מלאכת הדגירה באופן שווה. אם הביצה הולכת לאיבוד, הנקבה עשויה להטיל ביצה נוספת באותה עונה.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יג</span>
+                                תפוצה גאוגרפית
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-justify text-right">
+                                <p>הקונדור נפוץ לאורך כל <strong class="text-white">רכס הרי האנדים</strong> בדרום אמריקה. תפוצתו מתחילה בוונצואלה וקולומביה בצפון, עוברת דרך אקוודור, פרו, ובוליביה, ומגיעה עד לצ'ילה וארגנטינה בדרום הרחוק (ארץ האש).</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">יד</span>
+                                מבנה חברתי: מונוגמיה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-blue-600/20 text-right">
+                                <p>הקונדור הוא מין <strong class="text-white text-2xl">מונוגמי לטווח ארוך</strong>. בני הזוג יוצרים קשר חזק הנמשך שנים רבות, ולעיתים לכל החיים. הם נאמנים זה לזה ומתחזקים יחד את הטריטוריה ואת גידול הגוזל היחיד שלהם.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- שאר הסעיפים (ב-י) ברמה מורחבת -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ב. שנות חיים</h4>
+                        <p class="text-gray-200 text-2xl leading-relaxed text-justify text-right">הקונדור הוא אחד העופות מאריכי החיים בטבע. הוא חי בממוצע בין <span class="text-blue-400 font-black text-right">50 ל-70 שנים</span>. בשבי תועדו מקרים של פרטים שעברו את גיל 75, בזכות חילוף חומרים איטי והיעדר טורפים טבעיים בבגרות.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4 italic">ג. גודל ומשקל</h4>
-                        <div class="space-y-2 text-gray-200 text-lg">
-                            <p><strong>מוטת כנפיים:</strong> עד 3.3 מטרים (הגדולה ביותר בין עופות היבשה).</p>
-                            <p><strong>משקל:</strong> זכרים עד 15 ק"ג, נקבות עד 11 ק"ג.</p>
-                            <p><strong>גובה גוף:</strong> כ-1.2 עד 1.3 מטרים במצב עמידה.</p>
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl text-right">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ג. גודל ומשקל</h4>
+                        <div class="space-y-6 text-gray-200 text-2xl">
+                            <p><strong>מוטת כנפיים:</strong> עד 3.3 מטרים (שיא עולמי).</p>
+                            <p><strong>משקל:</strong> עד 15 ק"ג (זכרים כבדים יותר).</p>
+                            <p><strong>גובה עמידה:</strong> כ-1.2 עד 1.3 מטרים.</p>
                         </div>
                     </section>
                 </div>
 
-                <!-- ד. סיבת הבחירה - מחקר היסטורי ולאומי -->
-                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20">
-                    <h4 class="text-gray-400 font-bold mb-6 flex items-center gap-3">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                        ד. סיבת הבחירה כסמל לאומי
+                <section class="bg-gray-900/50 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-inner text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 flex items-center gap-5 text-3xl tracking-tighter">
+                        <span class="w-5 h-5 rounded-full bg-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.8)]"></span>
+                        ד. סיבת הבחירה כסמל לאומי (אקוודור)
                     </h4>
-                    <div class="text-gray-300 space-y-4 text-justify">
-                        <p>הקונדור מייצג את <strong class="text-white">הרוח הלאומית, הכוח והחירות</strong> של אקוודור. הוא נבחר משום שהוא "מלך האנדים", השולט על הפסגות הגבוהות ביותר של המדינה. הוא מופיע בראש סמל המדינה (Coat of Arms) כשהוא פורש כנפיים לרווחה, מסמל הגנה, עוצמה וריבונות.</p>
-                        <p>בתרבות הילידית של אקוודור, הקונדור נחשב לסמל של בריאות וכוח פיזי. בחירתו נועדה לגשר בין המורשת העתיקה של שבטי האנדים לבין המדינה המודרנית המחפשת סמל של עוצמה בלתי מתפשרת מול איומים חיצוניים.</p>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose">
+                        <p>הקונדור מייצג את <strong class="text-white uppercase tracking-tighter text-2xl text-justify">החירות והריבונות</strong> של אקוודור. הוא נבחר משום שהוא "מלך האנדים", השולט על הפסגות הגבוהות ביותר של המדינה. הוא מופיע בראש סמל המדינה (Coat of Arms) כשהוא פורש כנפיים לרווחה, מסמל הגנה על האומה ועוצמה בלתי מתפשרת.</p>
+                        <p>בתרבות הילידית של אקוודור, הקונדור נחשב לסמל של בריאות וכוח פיזי. בחירתו נועדה לגשר בין המורשת העתיקה של שבטי האנדים לבין המדינה המודרנית המחפשת סמל של עוצמה מול איומים חיצוניים.</p>
                     </div>
                 </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4">ה. הבדלים בין זכר ונקבה</h4>
-                        <p class="text-gray-300 leading-relaxed text-justify">הקונדור הוא מקרה נדיר שבו הזכר גדול מהנקבה. לזכר יש <strong class="text-white">כרבולת בשרנית</strong> (Caruncle) כהה בולטת על מצחו ועיניו בצבע חום-צהבהב. לנקבה אין כרבולת, ועיניה בצבע אדום עמוק ובוהק. בנוסף, לזכרים יש לעיתים קפלי עור בולטים בצוואר המשתנים בצבעם לפי מצבם הרגשי.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem]">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right text-justify">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-300 text-xl leading-relaxed text-justify text-right">בניגוד לרוב העופות הדורסים, הזכר גדול מהנקבה. לזכר יש <strong class="text-white">כרבולת בשרנית</strong> (Caruncle) כהה על המצח ועיניים בצבע חום-צהבהב, בעוד שלנקבה אין כרבולת ועיניה בצבע אדום עמוק. בנוסף, לזכר יש לעיתים קפלי עור בולטים בצוואר.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4">ו. שם בנגלה של הציפור</h4>
-                        <p class="text-gray-300 text-2xl font-black italic">אנדיאן קונדור (আন্দিয়ান কনডোর - Andean Condor)</p>
-                    </section>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ז. שנת הגילוי (טקסונומיה)</h4>
-                        <p class="text-gray-300 text-3xl font-black tracking-tighter">1758</p>
-                        <p class="text-sm text-gray-500 italic mt-2 text-justify">הוגדר מדעית על ידי קארולוס לינאוס בספרו "Systema Naturae".</p>
-                    </section>
-
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ט. תזונה</h4>
-                        <p class="text-gray-300 text-justify">אוכל נבלות (Scavenger) מובהק. הוא ניזון מפגרים של יונקים גדולים כגון אלפקות, צאן ובקר. הוא מסוגל לאכול עד 5 ק"ג בשר בארוחה אחת ולאחר מכן לצום שבועות ארוכים בזמן שהוא דואה בזרמי האוויר.</p>
+                    <section class="glass-card p-12 rounded-[3rem]">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ו. שם בנגלה של הציפור</h4>
+                        <p class="text-gray-300 text-5xl font-black italic text-right">אנדיאן קונדור (আন্দিয়ান কনডোর)</p>
+                        <p class="text-xs text-gray-500 mt-8 tracking-[0.4em] uppercase font-mono italic">שם מתורגם פונטית מהאנגלית בבנגלה.</p>
                     </section>
                 </div>
 
-                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20 shadow-inner">
-                    <h4 class="text-gray-400 font-bold mb-4 text-xl">ח. נסיבות הגילוי ההיסטוריות</h4>
-                    <div class="text-gray-300 space-y-4 text-justify">
-                        <p>הכובשים הספרדים הראשונים שהגיעו לאנדים במאה ה-16 נדהמו מגודלו של הקונדור. הכרוניקן <strong class="text-white">פדרו סייזה דה לאון</strong> תיאר אותו לראשונה בכתובים ב-1553. האירופאים לא האמינו שקיימת ציפור המסוגלת לדאות ללא תנועת כנפיים מעל פסגות בגובה 5,000 מטרים, עד שדגימות ראשונות הגיעו למדעי הטבע במאה ה-18.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter">ז. שנת הגילוי (טקסונומיה)</h4>
+                        <p class="text-gray-300 text-5xl font-black tracking-tighter">1758</p>
+                        <p class="text-sm text-gray-500 italic mt-4">הוגדר מדעית על ידי קארולוס לינאוס בספרו "Systema Naturae".</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter">ט. תזונה</h4>
+                        <p class="text-gray-300 text-lg leading-relaxed text-justify text-right">אוכל נבלות (Scavenger) מובהק. הוא ניזון מפגרים של יונקים גדולים (אלפקות, צאן, בקר). הוא יכול לעוף מעל 200 ק"מ ביום בחיפוש אחר מזון, תוך שימוש בזרמי אוויר חמים.</p>
+                    </section>
+                </div>
+
+                <section class="bg-gray-900/60 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-2xl text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 text-3xl uppercase tracking-tighter text-center">ח. נסיבות הגילוי וההיסטוריה</h4>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose">
+                        <p>האירופאים הראשונים שתיעדו את הקונדור היו הכובשים הספרדים במאה ה-16. הכרוניקן פדרו סייזה דה לאון תיאר ב-1553 את העופות העצומים הללו. הדיווחים המוקדמים היו מלאי פליאה, ורבים באירופה חשבו שמדובר בסיפורי מעשיות על מפלצות מעופפות, עד שהגיעו דגימות ראשונות לידי חוקרי הטבע במאה ה-18.</p>
                     </div>
                 </section>
 
-                <div class="bg-red-900/20 border border-red-800/40 rounded-[2rem] p-10 shadow-xl">
-                    <h4 class="text-2xl font-black text-red-400 mb-4 tracking-tighter uppercase">י. מצב השימור</h4>
-                    <p class="text-gray-100 text-xl font-bold mb-4">פגיע (Vulnerable - VU)</p>
-                    <p class="text-gray-300 leading-relaxed text-justify">נמצא תחת איום עקב אובדן שטחי מחייה, הרעלות עופרת (מציד) והרעלות מכוונות של חקלאים החוששים לצאנם. אקוודור מנהלת תוכנית רבייה לאומית קפדנית כדי להציל את הסמל הלאומי שלה.</p>
+                <div class="bg-red-900/40 border border-red-800/60 rounded-[4rem] p-16 shadow-2xl relative overflow-hidden text-right">
+                    <h4 class="text-4xl font-black text-red-400 mb-10 tracking-tighter uppercase text-right">י. מצב השימור</h4>
+                    <p class="text-gray-100 text-3xl font-black mb-8">פגיע (Vulnerable - VU)</p>
+                    <p class="text-gray-300 text-justify italic leading-relaxed text-2xl">הקונדור נמצא תחת איום עקב אובדן שטחי מחייה והרעלות עופרת. אקוודור מפעילה תוכניות רבייה בשבי ושחרור לטבע כדי להציל את הסמל הלאומי שלה מהכחדה.</p>
                 </div>
             </div>
         </article>
     </main>
 
-    <footer class="py-12 border-t border-gray-800 bg-gray-950 text-center">
-        <p class="text-gray-600 text-sm font-medium italic uppercase tracking-widest">Andean Condor - Ecuador Research • Ram 2026</p>
+    <footer class="py-24 border-t border-gray-800 bg-gray-950 text-center">
+        <div class="max-w-4xl mx-auto px-6 text-right text-center">
+            <p class="text-gray-500 font-black tracking-[0.5em] uppercase text-sm mb-6">Andean Condor - Ecuador Comprehensive Research • Ram 2026</p>
+            <p class="text-gray-700 text-xs tracking-widest leading-relaxed">נבנה בטכנולוגיית בינה מלאכותית מתקדמת • מותאם אישית למכשיר Samsung S25 Ultra • סרגל ניווט סטטי לשיפור חוויית הקריאה</p>
+        </div>
     </footer>
 
     <!-- חלון צף (Modal) -->
-    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 items-center justify-center p-4 backdrop-blur-2xl transition-all duration-500 opacity-0" onclick="closeModal()">
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/99 items-center justify-center p-4 backdrop-blur-3xl transition-all duration-700 opacity-0" onclick="closeModal()">
         <div class="relative max-w-6xl w-full flex flex-col items-center p-4" onclick="event.stopPropagation()">
-            <button onclick="closeModal()" class="absolute -top-16 left-0 p-4 text-white bg-gray-800/50 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            <button onclick="closeModal()" class="absolute -top-24 left-0 p-6 text-white bg-gray-800/70 hover:bg-red-600 rounded-full border border-white/20 shadow-2xl transition-all transform hover:rotate-90 active:scale-90 text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <img src="../images/ecuador-andean-condor.png" alt="קונדור האנדים" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-gray-700/50 scale-95 transition-transform duration-500" id="modalImg">
-            <div class="mt-8 text-center">
-                <h5 class="text-3xl font-black text-white tracking-[0.2em] uppercase italic">Vultur gryphus</h5>
-                <p class="text-blue-400 font-bold tracking-widest uppercase">הציפור הלאומית של אקוודור</p>
+            <img src="../images/ecuador-andean-condor.png" alt="קונדור האנדים" class="max-w-full max-h-[70vh] object-contain rounded-[4rem] shadow-[0_0_200px_rgba(59,130,246,0.4)] border border-gray-700 scale-90 transition-transform duration-700" id="modalImg">
+            <div class="mt-16 text-center space-y-6 text-right">
+                <h5 class="text-5xl font-black text-white tracking-[0.5em] uppercase italic">Vultur gryphus</h5>
+                <p class="text-blue-400 font-black tracking-[0.3em] uppercase text-2xl">הציפור הלאומית של אקוודור • מחקר ויזואלי</p>
             </div>
         </div>
     </div>
@@ -188,7 +251,7 @@
             const img = document.getElementById('modalImg');
             m.classList.remove('hidden');
             m.classList.add('flex');
-            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-95'); }, 10);
+            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-90'); }, 20);
             document.body.style.overflow = 'hidden';
         }
         function closeModal() {
@@ -196,8 +259,8 @@
             const img = document.getElementById('modalImg');
             m.classList.remove('opacity-100');
             img.classList.remove('scale-100');
-            img.classList.add('scale-95');
-            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 500);
+            img.classList.add('scale-90');
+            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 600);
             document.body.style.overflow = '';
         }
         document.addEventListener('keydown', e => { if(e.key === "Escape") closeModal(); });
