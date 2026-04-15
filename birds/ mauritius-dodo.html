@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>דודו - מאוריציוס | מחקר אנציקלופדי עמוק</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,6 +33,7 @@
 </head>
 <body class="min-h-screen flex flex-col selection:bg-blue-500/30 fade-in">
 
+    <!-- סרגל ניווט סטטי -->
     <header class="w-full bg-gray-900 border-b border-gray-800 shadow-md">
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <a href="../index.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-all group">
@@ -40,35 +42,40 @@
                 </svg>
                 חזרה לארכיון הראשי
             </a>
-            <span class="text-gray-500 text-sm hidden md:block italic tracking-widest uppercase font-bold">Dodo Bird Research</span>
+            <span class="text-gray-500 text-sm hidden md:block italic font-bold">Deep Research Series - 2026</span>
         </div>
     </header>
 
     <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-8 lg:p-12">
+        
         <article class="bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-2xl">
             
+            <!-- אזור תמונה מרכזי -->
             <div class="relative h-72 sm:h-[500px] w-full cursor-pointer group" onclick="openModal()">
-                <img src="../images/mauritius-dodo.png" alt="ציפור הדודו" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                <!-- נתיב מקומי מסונכרן לתיקיית images -->
+                <img src="../images/mauritius-dodo.png" alt="דודו" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-8 right-8 text-white">
+                <div class="absolute bottom-8 right-8">
                     <div class="bg-blue-600/90 backdrop-blur-md px-6 py-2 rounded-full flex items-center gap-3 shadow-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        <span class="font-bold uppercase tracking-widest">הגדל תמונה למחקר ויזואלי</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        <span class="font-bold text-white uppercase tracking-widest">הגדל תמונה למחקר ויזואלי</span>
                     </div>
                 </div>
             </div>
 
             <div class="p-8 sm:p-14 space-y-12">
+                
                 <header class="border-b border-gray-700 pb-8">
-                    <h2 class="text-5xl sm:text-6xl font-black text-white mb-4 tracking-tighter">דודו (Dodo)</h2>
+                    <h2 class="text-5xl sm:text-6xl font-black text-white mb-4 tracking-tighter uppercase">דודו (Dodo)</h2>
                     <div class="flex flex-wrap items-center gap-4 text-blue-400">
-                        <span class="text-2xl font-light italic text-justify">Raphus cucullatus</span>
+                        <span class="text-2xl font-light italic">Raphus cucullatus</span>
                         <span class="h-1.5 w-1.5 rounded-full bg-gray-600"></span>
                         <span class="text-xl font-bold uppercase tracking-widest">מאוריציוס (Mauritius)</span>
                     </div>
                 </header>
 
-                <section id="etymology">
+                <!-- א. אטימולוגיה מורחבת ומעמיקה -->
+                <section>
                     <h4 class="text-2xl font-bold text-white mb-8 flex items-center gap-4">
                         <span class="h-10 w-2 bg-blue-600 rounded-full"></span>
                         א. אטימולוגיה (חקר השם המלא)
@@ -77,90 +84,97 @@
                         <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
                             <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם המדעי: Raphus cucullatus</h5>
                             <div class="space-y-4 text-gray-300">
-                                <p><strong class="text-white">Raphus (יוונית):</strong> נגזר מהמילה <span class="italic">Raphes</span> שפירושה "תפר". השם מתאר את המקור המיוחד שנראה כמורכב מחלקים "תפורים" זה לזה. השם ניתן בדיעבד על ידי חוקר הטבע בריסון ב-1760.</p>
-                                <p><strong class="text-white">cucullatus (לטינית):</strong> פירושו "עוטה ברדס". מתייחס לנוצות הראש והצוואר שנראו בציורים המוקדמים כגלימת נזיר המכסה את פניו של הדודו.</p>
+                                <p><strong class="text-white">Raphus (יוונית):</strong> נגזר מהמילה <span class="italic font-mono">Raphes</span> שפירושה "תפר". שם זה מתייחס למקור העצום והמעוקל של הדודו, שחוקרי הטבע המוקדמים סברו כי הוא נראה כבנוי מחלקים נפרדים ש"נתפרו" יחד על ידי הטבע.</p>
+                                <p><strong class="text-white">cucullatus (לטינית):</strong> פירושו "עוטה ברדס" (Hooded). השם מתאר את הניצוי הייחודי סביב ראשו וצווארו של הדודו, שיוצר מראה של גלימת נזיר עם ברדס המכסה את פניו.</p>
                             </div>
                         </div>
+
                         <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
                             <h5 class="text-blue-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם העממי: Dodo</h5>
-                            <div class="space-y-4 text-gray-300">
-                                <p><strong class="text-white">Doido (פורטוגזית):</strong> התיאוריה המובילה גורסת כי מקור השם במילה <span class="italic font-bold text-justify">Doido</span> שפירושה "שוטה". המלחים כינו אותו כך בשל חוסר הפחד שלו והעובדה שנתפס בקלות.</p>
-                                <p><strong class="text-white">Dodaars (הולנדית):</strong> פירושו "אחוריים תפוחים", כינוי שהעניקו מלחים הולנדים בשל המראה המעוגל והמסורבל של הציפור.</p>
+                            <div class="space-y-4 text-gray-300 text-justify">
+                                <p><strong class="text-white">Doido (פורטוגזית):</strong> התיאוריה המקובלת ביותר היא שהמילה נגזרת מהמילה <span class="italic font-bold">Doido</span> שפירושה "שוטה" או "טיפש". המלחים הפורטוגזים כינו אותו כך בשל חוסר הפחד המוחלט שלו מבני אדם (שנבע מהיעדר טורפים באי) והקלות שבה ניתן היה לתפוס אותו.</p>
+                                <p><strong class="text-white">Dodaars (הולנדית):</strong> הכינוי ההולנדי המקורי שפירושו "אחוריים תפוחים", רמז למראה הזנב הפלומתי והעגול של הציפור. ההולנדים גם כינו אותו בשם <span class="italic font-bold">Walghvogel</span> ("עוף מגעיל") משום שבשרו היה קשה ובלתי טעים לבישול.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                <!-- נתונים ביולוגיים וזואולוגיים -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
+                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30 shadow-lg">
                         <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4 italic">ב. שנות חיים</h4>
-                        <p class="text-gray-200 text-lg">מחקרי עצמות (היסטולוגיה) מעריכים כי הדודו חי בטבע בין <span class="text-blue-400 font-bold">17 ל-21 שנים</span>. הוא הגיע לבגרות מינית בגיל שנתיים.</p>
+                        <p class="text-gray-200 text-lg">על סמך מחקרים היסטולוגיים של עצמות מאובנות, מדענים מעריכים כי הדודו הגיע לבגרות מינית בגיל שנתיים וחי בטבע בממוצע בין <span class="text-blue-400 font-bold">17 ל-21 שנים</span>. הוא נחשב למאריך ימים ביחס למשפחת היוניים אליה השתייך.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
+                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30 shadow-lg">
                         <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4 italic">ג. גודל ומשקל</h4>
                         <div class="space-y-2 text-gray-200 text-lg text-justify">
-                            <p><strong>גובה:</strong> כ-1 מטר.</p>
-                            <p><strong>משקל:</strong> נע בין 10.6 ק"ג ל-21.1 ק"ג (השתנה עונתית בהתאם למקורות מזון).</p>
+                            <p><strong>גובה ממוצע:</strong> כ-1 מטר (3 רגל ו-3 אינץ').</p>
+                            <p><strong>משקל משוער:</strong> נע בין 10.6 ק"ג ל-21.1 ק"ג. מחקרים מודרניים טוענים כי המשקל השתנה דרמטית בין עונות השנה עקב צבירת שומן לקראת תקופות יובש.</p>
                         </div>
                     </section>
                 </div>
 
+                <!-- ד. סיבת הבחירה - מחקר היסטורי ולאומי -->
                 <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20">
                     <h4 class="text-gray-400 font-bold mb-6 flex items-center gap-3">
                         <span class="w-2 h-2 rounded-full bg-blue-500"></span>
                         ד. סיבת הבחירה כסמל לאומי
                     </h4>
                     <div class="text-gray-300 space-y-4 text-justify">
-                        <p>הדודו הוא סמל הריבונות של מאוריציוס. הבחירה בציפור שנכחדה היא סמלית מאוד: היא מייצגת את <strong class="text-white text-justify">הייחודיות האקולוגית</strong> של האי ואת האחריות העולמית לשימור הטבע. הוא מופיע במרכז סמל המדינה כתומך במגן הלאומי.</p>
+                        <p>הבחירה בדודו כסמל הלאומי של מאוריציוס היא הצהרה פילוסופית וסביבתית עמוקה ביותר. המדינה בחרה בציפור שנכחדה כדי לסמל את <strong class="text-white">הייחודיות האקולוגית</strong> של האי ואת האחריות המוסרית של האנושות לשימור הטבע. הדודו היה אנדמי (ייחודי) אך ורק למאוריציוס, והוא משמש כיום כ"נורת אזהרה" עולמית לחשיבות הגנת המגוון הביולוגי. הוא מופיע בגאווה במרכז סמל המדינה (Coat of Arms) כתומך במגן הלאומי.</p>
                     </div>
                 </section>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
                         <h4 class="text-gray-400 font-bold mb-4 italic">ה. הבדלים בין זכר ונקבה</h4>
-                        <p class="text-gray-300 text-justify">מחקרים בשלדים מצביעים על דימורפיזם זוויגי של גודל. הזכרים היו גדולים משמעותית מהנקבות ובעלי מקור חזק ורחב יותר לשימוש במאבקי טריטוריה.</p>
+                        <p class="text-gray-300 text-justify leading-relaxed">מחקרים ביו-מכניים של שלדים שנמצאו במערות באי מצביעים על כך שהיה קיים <strong class="text-white">דימורפיזם זוויגי</strong> של גודל. הזכרים היו גדולים משמעותית מהנקבות, בעלי מבנה עצמות חזק יותר ומקור רחב יותר, ששימש כנראה למאבקי טריטוריה וחיזור בעונת הרבייה המתרחשת באוגוסט.</p>
                     </section>
 
                     <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4 italic">ו. שם בנגלה של הציפור</h4>
+                        <h4 class="text-gray-400 font-bold mb-4 italic text-justify">ו. שם בנגלה של הציפור</h4>
                         <p class="text-gray-300 text-2xl font-black italic">דודו פאקהי (ডোডো পাখি - Dodo Pakhi)</p>
+                        <p class="text-xs text-gray-500 mt-2 tracking-widest uppercase font-mono italic">Pakhi = ציפור בשפה הבנגלית.</p>
                     </section>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ז. שנת הגילוי (התיעוד הראשון)</h4>
+                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase tracking-tighter">ז. שנת הגילוי (התיעוד הראשון)</h4>
                         <p class="text-gray-300 text-3xl font-black tracking-tighter">1598</p>
-                        <p class="text-sm text-gray-500 italic mt-2">התיעוד ההולנדי הראשון על ידי אדמירל ואן וארוויק.</p>
+                        <p class="text-sm text-gray-500 italic mt-2">התיעוד ההולנדי הרשמי הראשון על ידי אדמירל ואן וארוויק בספטמבר 1598.</p>
                     </section>
 
                     <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase">ט. תזונה</h4>
-                        <p class="text-gray-300 text-justify">אוכל-פירות (Frugivore). ניזון מפירות שנשרו, זרעים ופקעות. הוא בלע "אבני קיבה" לסיוע בריסוק גרעינים קשים בתוך גופו.</p>
+                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase tracking-tighter">ט. תזונה</h4>
+                        <p class="text-gray-300 text-justify">הדודו היה אוכל-פירות (Frugivore) מובהק. הוא ניזון מפירות שנשרו מעצי האי (כמו עץ הטמבלקוק), זרעים, פקעות, וסרטנים קטנים בביצות. הוא נהג לבלוע "אבני קיבה" (Gizzard stones) כדי לסייע בריסוק מזון קשה בתוך גופו.</p>
                     </section>
                 </div>
 
+                <!-- ח. נסיבות הגילוי ההיסטוריות -->
                 <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20 shadow-inner">
-                    <h4 class="text-gray-400 font-bold mb-4 text-xl">ח. נסיבות הגילוי ההיסטוריות</h4>
+                    <h4 class="text-gray-400 font-bold mb-4 text-xl">ח. נסיבות הגילוי והמסע ההולנדי</h4>
                     <div class="text-gray-300 space-y-4 text-justify">
-                        <p>הדודו התגלה כאשר צי הולנדי עגן במאוריציוס ב-1598. המלחים נדהמו לגלות ציפור חסרת פחד. פחות מ-100 שנה לאחר הגילוי, המין נכחד כתוצאה מציד והרס קינים על ידי מינים פולשים (חזירים וחולדות) שהובאו לאי.</p>
+                        <p>הדודו התגלה לעולם המערבי כאשר צי של שמונה ספינות הולנדיות בפיקודו של <strong class="text-white">האדמירל יעקוב קורנליוס ואן וארוויק</strong> עגן באי מאוריציוס ב-1598 בעקבות סערה בדרכם לאינדונזיה. המלחים נדהמו לגלות עוף כבד וחסר יכולת תעופה. הגילוי סימן את תחילת סופו; תוך פחות מ-100 שנה, המין נכחד כתוצאה מציד ישיר והרס קינים על ידי מינים פולשים (חזירים, קופים וחולדות) שהובאו לאי בספינות.</p>
                     </div>
                 </section>
 
-                <div class="bg-red-900/20 border border-red-800/40 rounded-[2rem] p-10 shadow-xl">
+                <!-- מצב שימור - מצבה היסטורית -->
+                <div class="bg-red-900/30 border border-red-800/40 rounded-[2rem] p-10 shadow-xl relative overflow-hidden">
                     <h4 class="text-2xl font-black text-red-400 mb-4 tracking-tighter uppercase">י. מצב השימור</h4>
                     <p class="text-gray-100 text-xl font-bold mb-4">נכחד (Extinct - EX)</p>
-                    <p class="text-gray-300 text-justify italic">נכחד סביב שנת 1681. הדודו הפך למקרה המפורסם ביותר בהיסטוריה של מין שנכחד ישירות בגלל האדם.</p>
+                    <p class="text-gray-300 text-justify italic leading-relaxed">נכחד סביב שנת <strong class="text-white">1681</strong>. הדודו הפך למקרה המפורסם ביותר בהיסטוריה המודרנית של מין שנכחד ישירות כתוצאה מפעילות אנושית. מותו הוליד את תפיסת שימור הטבע המודרנית המכירה בכך שמינים יכולים להיעלם לנצח מעולמנו.</p>
                 </div>
             </div>
         </article>
     </main>
 
     <footer class="py-12 border-t border-gray-800 bg-gray-950 text-center">
-        <p class="text-gray-600 text-sm font-medium italic uppercase tracking-widest">Dodo - Mauritius Research • Ram 2026</p>
+        <p class="text-gray-500 text-sm font-medium italic uppercase tracking-widest">Dodo - Mauritius Deep Research • Ram 2026</p>
     </footer>
 
+    <!-- חלון צף (Modal) -->
     <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 items-center justify-center p-4 backdrop-blur-2xl transition-all duration-500 opacity-0" onclick="closeModal()">
         <div class="relative max-w-6xl w-full flex flex-col items-center p-4" onclick="event.stopPropagation()">
             <button onclick="closeModal()" class="absolute -top-16 left-0 p-4 text-white bg-gray-800/50 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90">
