@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>תוכי הסיסרו - דומיניקה | מחקר היסטורי וזואולוגי מעמיק</title>
+    <title>תוכי הסיסרו - דומיניקה | מחקר היסטורי וזואולוגי מקיף ביותר</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,159 +29,219 @@
         .text-justify { text-align: justify; }
         .fade-in { animation: fadeIn 0.8s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        /* אופטימיזציה למסך S25 Ultra */
+        .glass-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-blur: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-purple-500/30 fade-in">
 
-    <!-- סרגל ניווט סטטי -->
-    <header class="w-full bg-gray-900 border-b border-gray-800 shadow-md">
-        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center text-purple-400 hover:text-purple-300 transition-all group">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- סרגל ניווט סטטי (נגלל עם הדף - לא מפריע) -->
+    <header class="w-full bg-gray-900 border-b border-gray-800">
+        <div class="max-w-[1440px] mx-auto px-6 h-24 flex items-center justify-between text-right">
+            <a href="../index.html" class="flex items-center text-purple-400 hover:text-purple-300 transition-all group font-black text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-                חזרה לארכיון הראשי
+                חזרה לארכיון
             </a>
-            <span class="text-gray-500 text-sm hidden md:block italic font-bold">מחקר מעמיק - רם 2026</span>
+            <div class="flex flex-col items-end">
+                <span class="text-white font-bold text-lg">ארכיון הציפורים הלאומיות</span>
+                <span class="text-gray-500 text-xs italic">מחקר מאת רם • 2026</span>
+            </div>
         </div>
     </header>
 
-    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-8 lg:p-12">
+    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-10 lg:p-16">
         
-        <article class="bg-gray-800 rounded-[2.5rem] overflow-hidden border border-gray-700 shadow-2xl">
+        <article class="bg-gray-800 rounded-[3rem] overflow-hidden border border-gray-700 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.8)]">
             
-            <!-- אזור תמונה מרכזי -->
-            <div class="relative h-72 sm:h-[500px] w-full cursor-pointer group" onclick="openModal()">
-                <img src="../images/dominica-sisserou-parrot.png" alt="תוכי הסיסרו" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-8 right-8">
-                    <div class="bg-purple-600/90 backdrop-blur-md px-6 py-2 rounded-full flex items-center gap-3 shadow-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        <span class="font-bold text-white uppercase tracking-wider">הגדל תמונה למחקר ויזואלי</span>
-                    </div>
+            <!-- אזור תמונה ראשי -->
+            <div class="relative h-80 sm:h-[600px] w-full cursor-pointer group" onclick="openModal()">
+                <img src="../images/dominica-sisserou-parrot.png" alt="תוכי הסיסרו" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2500ms]">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-95"></div>
+                <div class="absolute bottom-12 right-12 left-12">
+                    <h1 class="text-6xl sm:text-8xl font-black text-white tracking-tighter mb-4 text-right">תוכי הסיסרו</h1>
+                    <p class="text-purple-400 text-3xl font-light italic text-right">Sisserou Parrot • Dominica</p>
                 </div>
             </div>
 
-            <div class="p-8 sm:p-14 space-y-12">
+            <div class="p-8 sm:p-24 space-y-24">
                 
-                <header class="border-b border-gray-700 pb-8">
-                    <h2 class="text-5xl sm:text-6xl font-black text-white mb-4 tracking-tighter">תוכי הסיסרו (Sisserou Parrot)</h2>
-                    <div class="flex flex-wrap items-center gap-4 text-purple-400">
-                        <span class="text-2xl font-light italic">Amazona imperialis</span>
-                        <span class="h-1.5 w-1.5 rounded-full bg-gray-600"></span>
-                        <span class="text-xl font-bold uppercase tracking-widest">דומיניקה (Dominica)</span>
-                    </div>
-                </header>
-
-                <!-- א. אטימולוגיה מורחבת ומעמיקה -->
+                <!-- א. אטימולוגיה מורחבת (הפרדה מלאה) -->
                 <section>
-                    <h4 class="text-2xl font-bold text-white mb-8 flex items-center gap-4">
-                        <span class="h-10 w-2 bg-purple-600 rounded-full"></span>
+                    <h4 class="text-4xl font-black text-white mb-12 flex items-center gap-5 text-right">
+                        <span class="h-16 w-3 bg-purple-600 rounded-full shadow-[0_0_20px_rgba(147,51,234,0.6)]"></span>
                         א. אטימולוגיה (חקר השם המלא)
                     </h4>
-                    <div class="grid gap-6">
-                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
-                            <h5 class="text-purple-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg uppercase tracking-wide">השם המדעי: Amazona imperialis</h5>
-                            <div class="space-y-4 text-gray-300">
-                                <p><strong class="text-white">Amazona (לטינית/צרפתית):</strong> נגזר מהשם הצרפתי <span class="italic font-mono">Amazone</span>, שניתן לסוג תוכים זה המקושר ליערות האמזונס (אף שהמין הספציפי חי בקריביים). מקור המילה ביוונית עתיקה המתייחס ללוחמות המיתולוגיות "אמזונות".</p>
-                                <p><strong class="text-white">imperialis (לטינית):</strong> פירושו "אימפריאלי" או "מלכותי". שם זה ניתן לו בשל גודלו המרשים ונוצותיו הסגולות-כהות המזכירות גלימות מלכות עתיקות. הוא נחשב לתוכי הגדול ביותר בסוג אמזונה.</p>
+                    <div class="grid gap-12 text-right">
+                        <!-- השם העממי והילידי -->
+                        <div class="glass-card p-12 rounded-[3rem]">
+                            <h5 class="text-purple-300 font-black mb-8 border-b border-gray-700 pb-6 text-2xl uppercase tracking-widest text-right">המקור הילידי: Sisserou</h5>
+                            <div class="space-y-8 text-gray-300 text-xl leading-relaxed text-justify">
+                                <p>השם "סיסרו" אינו תרגום מדעי, אלא מורשת לשונית של תושבי האי המקוריים:</p>
+                                <div class="bg-gray-950/80 p-8 rounded-3xl border border-purple-500/20 shadow-inner">
+                                    <span class="text-purple-400 font-black block mb-4 text-sm uppercase tracking-widest italic text-right">שפות הקאריב (Island Carib):</span>
+                                    <p class="text-xl font-medium">השם נגזר מהמילה המקומית בשפת ה-Kalpago. זהו שם מסורתי שהשתמר לאורך דורות ומדגיש את הזהות האנדמית של הציפור לאי דומיניקה. השם הפך לסימן היכר של גאווה לאומית, המבדיל אותו מתוכים אחרים באזור הקריביים.</p>
+                                </div>
+                                <p class="pt-6 border-t border-gray-700 italic">בדומיניקה, השם "סיסרו" מעורר תחושת כבוד עמוקה לטבע הבתולי של "אי הטבע".</p>
                             </div>
                         </div>
 
-                        <div class="bg-gray-900/60 p-8 rounded-3xl border border-gray-700/50 shadow-inner">
-                            <h5 class="text-purple-300 font-bold mb-4 border-b border-gray-800 pb-2 text-lg">השם העממי: Sisserou</h5>
-                            <div class="space-y-4 text-gray-300 text-justify">
-                                <p><strong class="text-white">Sisserou (קריבית מקומית):</strong> השם נגזר משפות הילידים הקריביים (Kalpago) המקוריות של האי דומיניקה. זהו שם מסורתי שהשתמר לאורך דורות ומדגיש את הקשר העמוק שבין הציפור לבין הזהות המקומית של האי.</p>
+                        <!-- השם המדעי -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-right">
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl">
+                                <h5 class="text-purple-300 font-bold mb-6 text-2xl tracking-tighter">הסוג: Amazona</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2">מקור: צרפתית/לטינית</p>
+                                <p class="text-gray-300 text-lg leading-relaxed text-right">השם נגזר מהמילה הצרפתית <strong class="text-white italic">Amazone</strong>, שניתנה במקור לתוכים מהאזור הטרופי של אמריקה הדרומית. המקור רחוק יותר וקשור למיתולוגיה היוונית על הלוחמות ה"אמזונות".</p>
+                            </div>
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl">
+                                <h5 class="text-purple-300 font-bold mb-6 text-2xl tracking-tighter">המין: imperialis</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2">מקור: לטינית</p>
+                                <p class="text-gray-300 text-lg leading-relaxed text-right">פירושו המילולי הוא <strong class="text-white">"קיסרי"</strong> או "מלכותי". השם ניתן לו בשל גודלו המסיבי (הגדול ביותר בסוג אמזונה) ונוצותיו הסגולות הכהות המזכירות גלימות מלכות עתיקות.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- נתונים ביולוגיים וזואולוגיים -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4 italic">ב. שנות חיים</h4>
-                        <p class="text-gray-200 text-lg">כמו תוכים גדולים רבים, הסיסרו מאריך ימים. בטבע הוא חי בממוצע בין <span class="text-purple-400 font-bold">50 ל-70 שנים</span>. בתנאי שבי מוגנים תועדו מקרים שהגיעו אף מעבר לכך.</p>
+                <!-- פרק רבייה ותפוצה (סעיפים יא-יד) - חדש ומורחב -->
+                <section class="bg-purple-900/10 border border-purple-900/30 rounded-[4rem] p-12 sm:p-20 shadow-[inset_0_0_50px_rgba(0,0,0,0.5)] text-right">
+                    <h4 class="text-4xl font-black text-purple-400 mb-16 tracking-[0.2em] uppercase text-center italic">ניתוח זואולוגי: רבייה ותפוצה</h4>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-purple-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(147,51,234,0.4)]">יא</span>
+                                כמות ביצים בכל הטלה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-purple-600/20 text-right">
+                                <p>הסיסרו מטיל בדרך כלל <strong class="text-white text-2xl">2 ביצים</strong> בכל מחזור רבייה. באופן טרגי, ברוב המקרים רק גוזל אחד מצליח לשרוד ולהגיע לבגרות, עקב תחרות או תנאי סביבה קשים ביערות הגשם הגבוהים.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-purple-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(147,51,234,0.4)]">יב</span>
+                                תקופת הדגירה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-purple-600/20 text-right">
+                                <p>משך הדגירה נמשך בין <strong class="text-white text-2xl">26 ל-28 ימים</strong>. הדגירה מתבצעת בחללי עצים גבוהים מאוד (לרוב עצי Sloanea או Dacryodes), כאשר הנקבה דוגרת והזכר מביא לה מזון ומגן על סביבת הקן.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-purple-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(147,51,234,0.4)]">יג</span>
+                                תפוצה גאוגרפית
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-purple-600/20 text-justify text-right">
+                                <p>הסיסרו הוא מין <strong class="text-white">אנדמי לאי דומיניקה בלבד</strong>. הוא חי אך ורק ביערות הגשם ההרריים (Montane Rainforest) בגבהים של מעל 600 מטרים. אזורי הקינון העיקריים שלו הם סביב הר הגעש מורן דיאבלוטינס והפארק הלאומי מורן טרואה פיטון.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-purple-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(147,51,234,0.4)]">יד</span>
+                                מבנה חברתי: מונוגמיה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-purple-600/20 text-right">
+                                <p>כמו תוכים גדולים רבים, הסיסרו הוא <strong class="text-white text-2xl">מונוגמי לכל החיים</strong>. בני הזוג יוצרים קשר בל ינתק, עפים יחד בחיפוש אחר מזון ומתקשרים בקריאות עמוקות ומהדהדות הנשמעות למרחקים ביער הצפוף.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- שאר הסעיפים (ב-י) ברמה מורחבת -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ב. שנות חיים</h4>
+                        <p class="text-gray-200 text-2xl leading-relaxed text-justify text-right">תוכי הסיסרו הוא מאריך ימים באופן יוצא דופן. בטבע הוא חי בממוצע בין <span class="text-purple-400 font-black text-right">50 ל-70 שנים</span>. בתנאי שבי מבוקרים ומוגנים תועדו פרטים שהגיעו אף מעבר לגיל 80, מה שהופך אותו לסמל של יציבות וחוכמה.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-widest mb-4 italic">ג. גודל ומשקל</h4>
-                        <div class="space-y-2 text-gray-200 text-lg">
-                            <p><strong>אורך גוף:</strong> כ-45 עד 51 ס"מ (הגדול ביותר במשפחתו).</p>
-                            <p><strong>משקל:</strong> נע בין 650 ל-900 גרם בממוצע.</p>
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl text-right">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic">ג. גודל ומשקל</h4>
+                        <div class="space-y-6 text-gray-200 text-2xl">
+                            <p><strong>אורך גוף:</strong> 45 - 51 ס"מ.</p>
                             <p><strong>מוטת כנפיים:</strong> כ-75 ס"מ.</p>
+                            <p><strong>משקל:</strong> 650 - 900 גרם.</p>
+                            <p class="text-sm text-gray-500 italic">זהו התוכי הגדול ביותר בסוג האמזונה.</p>
                         </div>
                     </section>
                 </div>
 
-                <!-- ד. סיבת הבחירה - מחקר היסטורי ולאומי -->
-                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20">
-                    <h4 class="text-gray-400 font-bold mb-6 flex items-center gap-3">
-                        <span class="w-2 h-2 rounded-full bg-purple-500"></span>
-                        ד. סיבת הבחירה כסמל לאומי
+                <section class="bg-gray-900/50 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-inner text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 flex items-center gap-5 text-3xl tracking-tighter">
+                        <span class="w-5 h-5 rounded-full bg-purple-500 shadow-[0_0_25px_rgba(147,51,234,0.8)]"></span>
+                        ד. סיבת הבחירה כסמל לאומי (דומיניקה)
                     </h4>
-                    <div class="text-gray-300 space-y-4 text-justify">
-                        <p>תוכי הסיסרו נבחר לסמל הלאומי של דומיניקה משום שהוא <strong class="text-white">אנדמי לאי בלבד</strong> (אינו קיים בשום מקום אחר בעולם). הוא מייצג את הטבע הפראי, הבתולי והעוצמתי של האי, המכונה "אי הטבע של הקריביים".</p>
-                        <p>הוא מופיע במרכז דגל המדינה, מוקף ב-10 כוכבים המייצגים את קהילות האי. בחירתו מסמלת את הגאווה הלאומית ואת המחויבות העמוקה של המדינה לשימור המגוון הביולוגי הייחודי שלה, אל מול איומי הטבע והאדם.</p>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose">
+                        <p>הסיסרו נבחר לסמל את דומיניקה משום שהוא הציפור המרהיבה והנדירה ביותר באי, והוא אינו קיים בשום מקום אחר בעולם. הוא מייצג את ה<strong class="text-white uppercase tracking-tighter text-2xl text-justify">גאווה והייחודיות</strong> של האי, המכונה "אי הטבע של הקריביים".</p>
+                        <p>הוא מופיע במרכז דגל המדינה (החל מ-1978), מוקף ב-10 כוכבים המייצגים את עשר הקהילות של האי. בחירתו מסמלת את המחויבות הלאומית לשימור הטבע אל מול סופות הוריקן הרסניות ואיומי פיתוח. עבור תושבי דומיניקה, הסיסרו הוא השומר של יערות הגשם וסמל לחוסן האומה.</p>
                     </div>
                 </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4">ה. הבדלים בין זכר ונקבה</h4>
-                        <p class="text-gray-300 leading-relaxed text-justify">הסיסרו אינו מציג דימורפיזם זוויגי בולט. הזכר והנקבה כמעט זהים בניצוים הסגול-ירוק המרהיב. לעיתים הזכרים עשויים להיות מעט גדולים יותר עם ראש רחב יותר, אך זיהוי ודאי מתאפשר בדרך כלל רק באמצעות בדיקות DNA או התנהגות רבייה.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem]">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-300 text-xl leading-relaxed text-justify text-right">תוכי הסיסרו אינו מציג דימורפיזם זוויגי בולט. זכרים ונקבות דומים מאוד בניצוים הסגול-מלכותי בחזה ובירוק הכהה בכנפיים. לעיתים הזכרים עשויים להיות מעט גדולים יותר עם ראש רחב יותר, אך זיהוי ודאי מתאפשר לרוב רק דרך בדיקות DNA או התנהגות רבייה מובהקת.</p>
                     </section>
 
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-4">ו. שם בנגלה של הציפור</h4>
-                        <p class="text-gray-300 text-2xl font-black italic uppercase">סיסרו פאקהי (সিসারো পাখি - Sisserou Pakhi)</p>
-                    </section>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase tracking-tighter">ז. שנת הגילוי (טקסונומיה)</h4>
-                        <p class="text-gray-300 text-3xl font-black tracking-tighter">1776</p>
-                        <p class="text-sm text-gray-500 italic mt-2">תואר מדעית על ידי חוקר הטבע הגרמני פיליפ לודוויג סטטיוס מילר.</p>
-                    </section>
-
-                    <section class="bg-gray-900/40 p-8 rounded-3xl border border-gray-700/30">
-                        <h4 class="text-gray-400 font-bold mb-2 text-sm uppercase tracking-tighter">ט. תזונה</h4>
-                        <p class="text-gray-300">התזונה מבוססת על פירות יער, זרעים, אגוזים וניצני פרחים הגדלים ביערות הגשם ההרריים. הוא מחבב במיוחד את פירות עצי ה-Dacryodes וה-Sloanea המקומיים.</p>
+                    <section class="glass-card p-12 rounded-[3rem]">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right">ו. שם בנגלה של הציפור</h4>
+                        <p class="text-gray-300 text-5xl font-black italic text-right">סיסרו פאקהי (সিসারো পাখি)</p>
+                        <p class="text-xs text-gray-500 mt-8 tracking-[0.4em] uppercase font-mono italic">Pakhi = ציפור בשפה הבנגלית.</p>
                     </section>
                 </div>
 
-                <!-- ח. נסיבות הגילוי ההיסטוריות -->
-                <section class="bg-gray-900/20 p-8 rounded-3xl border border-gray-700/20 shadow-inner">
-                    <h4 class="text-gray-400 font-bold mb-4 text-xl">ח. נסיבות הגילוי והמסע האירופאי</h4>
-                    <div class="text-gray-300 space-y-4 text-justify">
-                        <p>הסיסרו היה ידוע לילידי האי דומיניקה אלפי שנים. אירופאים תיעדו אותו לראשונה במהלך המאה ה-18, כחלק ממסעות מחקר בוטניים וזואולוגיים בקריביים. בשל העובדה שהוא חי ביערות גשם סבוכים וגבוהים מאוד (מעל 600 מטר), הגילוי שלו ותצפיות עליו היו קשים ומורכבים, מה שתרם למסתורין סביב "התוכי האימפריאלי".</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter">ז. שנת הגילוי (טקסונומיה)</h4>
+                        <p class="text-gray-300 text-5xl font-black tracking-tighter">1776</p>
+                        <p class="text-sm text-gray-500 italic mt-4 text-right">תואר מדעית על ידי חוקר הטבע הגרמני פיליפ לודוויג סטטיוס מילר.</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter">ט. תזונה</h4>
+                        <p class="text-gray-300 text-lg leading-relaxed text-justify text-right">התזונה מבוססת על פירות יער, זרעים, אגוזים וניצני פרחים הגדלים בצמרות יער הגשם. הוא מחבב במיוחד את פירות עצי ה-Dacryodes המקומיים ומשתמש במקורו החזק לפיצוח גרעינים קשים.</p>
+                    </section>
+                </div>
+
+                <section class="bg-gray-900/60 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-2xl text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 text-3xl uppercase tracking-tighter text-center">ח. נסיבות הגילוי והמסע</h4>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose text-right">
+                        <p>תוכי הסיסרו היה ידוע לילידי האי דומיניקה אלפי שנים כחלק בלתי נפרד מהמערכת האקולוגית. המדע המערבי "גילה" אותו במהלך המאה ה-18 במסגרת משלחות מחקר זואולוגיות לקריביים. בשל העובדה שהוא חי ביערות גשם סבוכים וגבוהים מאוד, הגילוי שלו ותצפיות עליו היו קשים ומורכבים, מה שתרם למסתורין סביב הציפור המלכותית.</p>
                     </div>
                 </section>
 
-                <div class="bg-red-900/20 border border-red-800/40 rounded-[2rem] p-10 shadow-xl">
-                    <h4 class="text-2xl font-black text-red-400 mb-4 tracking-tighter uppercase">י. מצב השימור</h4>
-                    <p class="text-gray-100 text-xl font-bold mb-4">בסכנת הכחדה קריטית (Critically Endangered - CR)</p>
-                    <p class="text-gray-300 leading-relaxed text-justify italic">הסיסרו הוא אחד העופות הנדירים בתבל. אוכלוסייתו מוערכת בכמה מאות פרטים בלבד. האיומים המרכזיים הם הוריקנים הרסניים (כמו הוריקן מריה ב-2017 שפגע קשות באוכלוסייה), אובדן שטחי מחייה וסחר בלתי חוקי. הממשלה בדומיניקה מנהלת תוכניות שימור קפדניות להצלת המין.</p>
+                <div class="bg-red-900/40 border border-red-800/60 rounded-[4rem] p-16 shadow-2xl relative overflow-hidden text-right">
+                    <h4 class="text-4xl font-black text-red-400 mb-10 tracking-tighter uppercase text-right">י. מצב השימור</h4>
+                    <p class="text-gray-100 text-3xl font-black mb-8">בסכנת הכחדה קריטית (Critically Endangered - CR)</p>
+                    <p class="text-gray-300 text-justify italic leading-relaxed text-2xl">הסיסרו הוא אחד העופות הנדירים בתבל. אוכלוסייתו מוערכת בכמה מאות פרטים בלבד. האיומים המרכזיים הם הוריקנים הרסניים (כמו הוריקן מריה ב-2017) ואובדן שטחי מחייה. ממשלת דומיניקה מנהלת תוכניות שימור קפדניות ביותר להצלת הסמל הלאומי.</p>
                 </div>
             </div>
         </article>
     </main>
 
-    <footer class="py-12 border-t border-gray-800 bg-gray-950 text-center">
-        <p class="text-gray-600 text-sm font-medium italic">ארכיון הציפורים הלאומיות • מחקר מעמיק עבור רם • 2026</p>
+    <footer class="py-24 border-t border-gray-800 bg-gray-950 text-center">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-gray-500 font-black tracking-[0.5em] uppercase text-sm mb-6">Sisserou Parrot - Dominica Comprehensive Research • Ram 2026</p>
+            <p class="text-gray-700 text-xs tracking-widest leading-relaxed">נבנה בטכנולוגיית בינה מלאכותית מתקדמת • מותאם אישית למכשיר Samsung S25 Ultra • סרגל ניווט סטטי לשיפור חוויית הקריאה</p>
+        </div>
     </footer>
 
-    <!-- חלון צף -->
-    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 items-center justify-center p-4 backdrop-blur-2xl transition-all duration-500 opacity-0" onclick="closeModal()">
+    <!-- חלון צף (Modal) -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/99 items-center justify-center p-4 backdrop-blur-3xl transition-all duration-700 opacity-0" onclick="closeModal()">
         <div class="relative max-w-6xl w-full flex flex-col items-center p-4" onclick="event.stopPropagation()">
-            <button onclick="closeModal()" class="absolute -top-16 left-0 p-4 text-white bg-gray-800/50 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            <button onclick="closeModal()" class="absolute -top-24 left-0 p-6 text-white bg-gray-800/70 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90 active:scale-90 text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <img src="../images/dominica-sisserou-parrot.png" alt="תוכי הסיסרו" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-gray-700/50 scale-95 transition-transform duration-500" id="modalImg">
-            <div class="mt-8 text-center">
-                <h5 class="text-3xl font-black text-white tracking-[0.2em] uppercase italic">Amazona imperialis</h5>
-                <p class="text-purple-400 font-bold tracking-widest">הציפור הלאומית האנדמית של דומיניקה</p>
+            <img src="../images/dominica-sisserou-parrot.png" alt="תוכי הסיסרו" class="max-w-full max-h-[70vh] object-contain rounded-[4rem] shadow-[0_0_200px_rgba(147,51,234,0.4)] border border-gray-700 scale-90 transition-transform duration-700" id="modalImg">
+            <div class="mt-16 text-center space-y-6 text-right">
+                <h5 class="text-5xl font-black text-white tracking-[0.5em] uppercase italic">Amazona imperialis</h5>
+                <p class="text-purple-400 font-black tracking-[0.3em] uppercase text-2xl">הציפור הלאומית של דומיניקה • מחקר ויזואלי</p>
             </div>
         </div>
     </div>
@@ -191,7 +252,7 @@
             const img = document.getElementById('modalImg');
             m.classList.remove('hidden');
             m.classList.add('flex');
-            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-95'); }, 10);
+            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-90'); }, 20);
             document.body.style.overflow = 'hidden';
         }
         function closeModal() {
@@ -199,8 +260,8 @@
             const img = document.getElementById('modalImg');
             m.classList.remove('opacity-100');
             img.classList.remove('scale-100');
-            img.classList.add('scale-95');
-            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 500);
+            img.classList.add('scale-90');
+            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 600);
             document.body.style.overflow = '';
         }
         document.addEventListener('keydown', e => { if(e.key === "Escape") closeModal(); });
