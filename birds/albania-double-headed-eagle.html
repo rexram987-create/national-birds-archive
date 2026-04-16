@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עיט כפול-ראש - אלבניה | מחקר היסטורי וזואולוגי מקיף ביותר</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: { 850: '#1f2937', 900: '#111827', 950: '#030712' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            line-height: 1.8;
+        }
+        .text-justify { text-align: justify; }
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        /* אופטימיזציה למסך S25 Ultra */
+        .glass-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-blur: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-red-500/30 fade-in text-right">
+
+    <!-- סרגל ניווט סטטי (נגלל עם הדף) -->
+    <header class="w-full bg-gray-900 border-b border-gray-800">
+        <div class="max-w-[1440px] mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center text-red-500 hover:text-red-400 transition-all group font-black text-xl text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+                חזרה לארכיון
+            </a>
+            <div class="flex flex-col items-end text-right">
+                <span class="text-white font-bold text-lg">ארכיון הציפורים הלאומיות</span>
+                <span class="text-gray-500 text-xs italic">מחקר מאת רם • 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl mx-auto w-full p-4 sm:p-10 lg:p-16">
+        
+        <article class="bg-gray-800 rounded-[3rem] overflow-hidden border border-gray-700 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.8)] text-right">
+            
+            <!-- אזור תמונה ראשי -->
+            <div class="relative h-80 sm:h-[600px] w-full cursor-pointer group" onclick="openModal()">
+                <img src="../images/albania-double-headed-eagle.png" alt="עיט כפול-ראש אלבניה" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2500ms]">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-95"></div>
+                <div class="absolute bottom-12 right-12 left-12 text-right">
+                    <h1 class="text-5xl sm:text-7xl font-black text-white tracking-tighter mb-4 text-right">העיט כפול-הראש</h1>
+                    <p class="text-red-500 text-3xl font-light italic text-right">Double-headed Eagle • Albania</p>
+                </div>
+            </div>
+
+            <div class="p-8 sm:p-24 space-y-24 text-right">
+                
+                <!-- א. אטימולוגיה מורחבת -->
+                <section>
+                    <h4 class="text-4xl font-black text-white mb-12 flex items-center gap-5 text-right">
+                        <span class="h-16 w-3 bg-red-600 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.6)]"></span>
+                        א. אטימולוגיה (חקר השם והסמל)
+                    </h4>
+                    <div class="grid gap-12 text-right">
+                        <!-- השם העממי והילידי -->
+                        <div class="glass-card p-12 rounded-[3rem]">
+                            <h5 class="text-red-400 font-black mb-8 border-b border-gray-700 pb-6 text-2xl uppercase tracking-widest text-right">השורש האלבני העתיק: Shqiponja</h5>
+                            <div class="space-y-8 text-gray-300 text-xl leading-relaxed text-justify text-right">
+                                <p>הזהות האלבנית שזורה בשמו של העיט יותר מכל אומה אחרת בעולם:</p>
+                                <div class="bg-gray-950/80 p-8 rounded-3xl border border-red-500/20 shadow-inner text-right">
+                                    <span class="text-red-500 font-black block mb-4 text-sm uppercase tracking-widest italic text-right">Shqipëria (ארץ העיטים):</span>
+                                    <p class="text-xl font-medium">האלבנים אינם קוראים לארצם "אלבניה" בשפתם, אלא <strong class="text-white italic text-right">"Shqipëria"</strong>. המילה מבוססת על השורש <strong class="text-white">shqip</strong> או <strong class="text-white">shqiponjë</strong>, שפירושו המילולי הוא "עיט". לפיכך, משמעות שמה של המדינה הוא "ארץ העיטים", והאלבנים רואים עצמם כ"בני העיט" (Shqiptarët).</p>
+                                </div>
+                                <div class="bg-gray-950/80 p-8 rounded-3xl border border-red-500/20 shadow-inner text-right">
+                                    <span class="text-red-500 font-black block mb-4 text-sm uppercase tracking-widest italic text-right">סמליות שני הראשים:</span>
+                                    <p class="text-xl font-medium">העיט כפול-הראש הוא סמל הראלדי שמקורו באימפריה הביזנטית. שני הראשים הצופים לשני כיוונים מנוגדים סימלו את שליטתה של האימפריה גם על המזרח (אסיה) וגם על המערב (אירופה), וכן את העירנות המוחלטת (Vigilance) מול אויבים מכל עבר.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- השם המדעי האמיתי (המייצג את הסמל) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-right">
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-red-400 font-bold mb-6 text-2xl tracking-tighter">הסוג: Aquila (העיט האמיתי)</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2 text-right">מקור: לטינית</p>
+                                <p class="text-gray-300 text-lg leading-relaxed text-justify text-right">על אף שהסמל הוא מיתולוגי, הציפור האמיתית החיה בהרי הבלקן ומייצגת את האתוס האלבני היא העיט (Aquila). בלטינית עתיקה המילה מציינת את כל העיטים האמיתיים הכהים.</p>
+                            </div>
+                            <div class="glass-card p-10 rounded-[2.5rem] shadow-xl text-right">
+                                <h5 class="text-red-400 font-bold mb-6 text-2xl tracking-tighter">המין: chrysaetos</h5>
+                                <p class="text-gray-400 text-sm italic mb-6 font-mono border-b border-gray-700 pb-2 text-right">מקור: יוונית עתיקה</p>
+                                <p class="text-gray-300 text-lg leading-relaxed text-justify text-right">משמעותו "עיט זהב". העיט הזהוב הוא הטורף האווירי הדומיננטי בהרי צפון אלבניה, והוא המקור הפיזיולוגי שעליו בוסס הסמל הדו-ראשי.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- פרק רבייה ותפוצה (סעיפים יא-יד) - מותאם למקור הזואולוגי -->
+                <section class="bg-red-900/10 border border-red-900/30 rounded-[4rem] p-12 sm:p-20 shadow-[inset_0_0_50px_rgba(0,0,0,0.5)] text-right">
+                    <h4 class="text-4xl font-black text-red-500 mb-16 tracking-[0.2em] uppercase text-center italic text-right">ניתוח זואולוגי: המקור החי (העיט הבלקני)</h4>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 text-right">
+                        <div class="space-y-6 text-right">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-red-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(220,38,38,0.4)] text-right text-black">יא</span>
+                                כמות ביצים בכל הטלה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-red-600/20 text-right">
+                                <p>בהתייחס לעיט החי בהרי אלבניה שעליו מבוסס הסמל, הנקבה מטילה <strong class="text-white text-2xl text-right">1 עד 3 ביצים</strong> בכל מחזור רבייה. הקן הענק נבנה על צוקים תלולים, בלתי נגישים בלב האלפים האלבניים.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 text-right">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-red-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(220,38,38,0.4)] text-right text-black">יב</span>
+                                תקופת הדגירה
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-red-600/20 text-right">
+                                <p>משך הדגירה בטבע נמשך בין <strong class="text-white text-2xl text-right">41 ל-45 ימים</strong>. כמו בסמל הדו-ראשי המייצג שיתוף פעולה והגנה מושלמת, גם בטבע ההורים משתפים פעולה בהגנה על הקן מפני סכנות הרי הבלקן.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 text-right">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-red-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(220,38,38,0.4)] text-right text-black">יג</span>
+                                תפוצה גאוגרפית
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-red-600/20 text-justify text-right">
+                                <p>במובן הביולוגי, הוא שולט ברכסי ההרים הגבוהים של הבלקן. במובן המיתולוגי, הסמל הדו-ראשי התפשט והיה נפוץ בכל רחבי <strong class="text-white text-right">האימפריה הביזנטית והאימפריה הרומית הקדושה</strong>, מאלבניה, דרך סרביה ועד רוסיה הצארית.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 text-right">
+                            <h5 class="text-white font-black text-2xl flex items-center gap-4 text-right">
+                                <span class="bg-red-600 w-12 h-12 rounded-2xl flex items-center justify-center text-lg shadow-[0_0_15px_rgba(220,38,38,0.4)] text-right text-black">יד</span>
+                                מבנה חברתי ונאמנות
+                            </h5>
+                            <div class="text-gray-300 text-xl space-y-6 pr-6 border-r-4 border-red-600/20 text-right">
+                                <p>כמו הנאמנות הבלתי מתפשרת של העם האלבני למולדתו, כך גם העיט בטבע הוא מין <strong class="text-white text-2xl text-right">מונוגמי לכל החיים</strong>. הזוג חולק נחלה אחת, שומר עליה בקנאות ומעביר אותה מדור לדור במשך עשרות שנים.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- שאר הסעיפים (ב-י) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right">
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl text-right">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic text-right">ב. שנות חיים</h4>
+                        <p class="text-gray-200 text-2xl leading-relaxed text-justify text-right">בטבע, העיט שעליו מבוסס הסמל חי <span class="text-red-500 font-black text-right">כ-20 שנים</span>. במיתולוגיה האלבנית, העיט הוא נצחי, אלמותי (Immortal), ומייצג את הישרדותה של האומה הבלקנית אל מול כיבושים עות'מאניים ממושכים.</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] border border-gray-700 shadow-2xl text-right text-right">
+                        <h4 class="text-gray-500 font-black text-xs uppercase tracking-[0.4em] mb-8 italic text-right">ג. גודל ועוצמה</h4>
+                        <div class="space-y-6 text-gray-200 text-2xl text-right">
+                            <p><strong>מוטת כנפיים (ביולוגית):</strong> עד 2.3 מטרים.</p>
+                            <p><strong>גודל מיתולוגי:</strong> כנפיו פורשות חסות על הרי אלבניה כולה.</p>
+                            <p><strong>צבע הסמל:</strong> צללית שחורה עזה (Sable) על רקע דם אדום (Gules).</p>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="bg-gray-900/50 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-inner text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 flex items-center gap-5 text-3xl tracking-tighter text-right text-right">
+                        <span class="w-5 h-5 rounded-full bg-red-500 shadow-[0_0_25px_rgba(220,38,38,0.8)] text-right"></span>
+                        ד. סיבת הבחירה כסמל לאומי - מורשת סקנדרבג
+                    </h4>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose text-right">
+                        <p>העיט כפול-הראש הפך לסמל ההתנגדות והלאומיות של אלבניה בזכות גיבור אחד: <strong class="text-white uppercase tracking-tighter text-2xl text-justify text-right">ג'רג' קסטריוטי סקנדרבג (Skanderbeg)</strong>. במאה ה-15, סקנדרבג איחד את הנסיכויות האלבניות השבטיות והוביל מרד מזהיר נגד האימפריה העות'מאנית הכבירה. הוא נשא דגל אדום עם עיט שחור כפול-ראש (שהיה במקור סמל משפחת האצולה שלו, שנגזר מהסמל הביזנטי).</p>
+                        <p>במשך עשרות שנים, סקנדרבג הדף פלישות טורקיות ענקיות והפך ל"מגן הנצרות". מאז, העיט השחור על הרקע האדום נחקק בדם הזיכרון הקולקטיבי האלבני כסמל לחירות, גבורה עילאית, ועמידה איתנה של מעטים מול רבים.</p>
+                    </div>
+                </section>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right text-right">
+                    <section class="glass-card p-12 rounded-[3rem] text-right text-right">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right text-justify text-right">ה. הבדלים בין זכר ונקבה</h4>
+                        <p class="text-gray-300 text-xl leading-relaxed text-justify text-right text-right">בסמל המיתולוגי אין הבדלי מגדר – שני הראשים מסמלים שוויון, אחדות ואת המיזוג בין הדת לבין השלטון האזרחי בביזנטיון. בטבע (העיט החי), כמו אצל רוב הדורסים, הנקבה גדולה וכבדה יותר מהזכר (דימורפיזם זוויגי הפוך), ושניהם חולקים את אותו צבע חום-שחור עמוק שהיווה השראה לדגל.</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] text-right text-right">
+                        <h4 class="text-gray-400 font-bold mb-8 italic text-2xl text-right text-right text-right">ו. שם בנגלה של הסמל</h4>
+                        <p class="text-gray-300 text-5xl font-black italic text-right text-right text-right">דו-מאטה איגל (দু-মাথা ঈগল)</p>
+                        <p class="text-xs text-gray-500 mt-8 tracking-[0.4em] uppercase font-mono italic text-right text-right text-right">תרגום מילולי בבנגלית: עיט (ঈগল) בעל שני (দু) ראשים (মাথা).</p>
+                    </section>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-right text-right text-right">
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg text-right text-right">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter text-right text-right">ז. שנת הגילוי (הופעה היסטורית)</h4>
+                        <p class="text-gray-300 text-5xl font-black tracking-tighter text-right text-right text-right">1443</p>
+                        <p class="text-sm text-gray-500 italic mt-4 text-right text-right">השנה בה סקנדרבג הניף לראשונה את דגל העיט השחור כפול-הראש בעיר קרויה (Krujë) עם שובו למרוד בעות'מאנים.</p>
+                    </section>
+
+                    <section class="glass-card p-12 rounded-[3rem] shadow-lg text-right text-right text-right">
+                        <h4 class="text-gray-400 font-bold mb-4 text-sm uppercase tracking-tighter text-right text-right text-right">ט. תזונה מיתולוגית</h4>
+                        <p class="text-gray-300 text-lg leading-relaxed text-justify text-right text-right text-right text-right">בעוד העיט הביולוגי ניזון מיונקים הרריים כגון שועלים ומכרסמים, ה"עיט האלבני" בפולקלור הוא עוף גאה הניזון מאומץ הלב של לוחמיו ו"ניזון מתבוסתם של אויבי המולדת". עיט זה לעולם אינו אוכל נבלות, סמל לטוהר המידות של העם האלבני.</p>
+                    </section>
+                </div>
+
+                <section class="bg-gray-900/60 p-12 sm:p-20 rounded-[4rem] border border-gray-700 shadow-2xl text-right text-right">
+                    <h4 class="text-gray-400 font-bold mb-10 text-3xl uppercase tracking-tighter text-center text-right text-right text-right text-right">ח. נסיבות הגילוי, מקורות חיטיים וביזנטיים</h4>
+                    <div class="text-gray-300 space-y-10 text-justify text-xl leading-loose text-right text-right text-right text-right">
+                        <p>אף על פי שסקנדרבג עשה בו שימוש כדי לאחד את אלבניה, העיט הדו-ראשי לא "התגלה" לראשונה באלבניה. שורשיו העתיקים ביותר נמצאים ב<strong class="text-white">תרבות החיתית</strong> ובשומר העתיקה במסופוטמיה (אלפיים שנה לפני הספירה), שם נמצאו תבליטי אבן של נשרים כפולי ראש.</p>
+                        <p>הסמל אומץ מאוחר יותר בימי הביניים על ידי האימפריה הביזנטית (תחת שושלת פלאיולוגוס) כסמל למדינה ולכנסייה האורתודוקסית, ושני הראשים צופים באופן סמלי לכיוון מערב (רומא) ומזרח (קונסטנטינופול). משפחות אצולה אלבניות אימצו את הסמל כדי להפגין את הקשר שלהן למורשת הביזנטית הגדולה, וכך הוא השתרש במדינה.</p>
+                    </div>
+                </section>
+
+                <div class="bg-red-900/40 border border-red-800/60 rounded-[4rem] p-16 shadow-2xl relative overflow-hidden text-right text-right text-right">
+                    <h4 class="text-4xl font-black text-red-500 mb-10 tracking-tighter uppercase text-right text-right text-right text-right">י. מצב השימור של האתוס</h4>
+                    <p class="text-gray-100 text-3xl font-black mb-8 text-right text-right text-right text-right">סמל נצחי (Eternal Icon)</p>
+                    <p class="text-gray-300 text-justify italic leading-relaxed text-2xl text-right text-right text-right text-right">כסמל, העיט הדו-ראשי האלבני הוא אלמותי ומשומר בחוקת המדינה. בטבע, לעומת זאת, העיט הזהוב האמיתי המייצג אותו סובל באלבניה מציד בלתי חוקי והרעלות (מוגדר כ-Vulnerable בבלקן). הממשלה האלבנית מנסה כיום לקדם מאמצי שימור ענפים תחת הסיסמה "מצילים את העיט של אלבניה" כדי להגן על החיה המייצגת את נשמת האומה.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="py-24 border-t border-gray-800 bg-gray-950 text-center text-right">
+        <div class="max-w-4xl mx-auto px-6 text-center text-center text-center">
+            <p class="text-gray-500 font-black tracking-[0.5em] uppercase text-sm mb-6 text-center text-center text-center">Double-headed Eagle - Albania Deep Research • Ram 2026</p>
+            <p class="text-gray-700 text-xs tracking-widest leading-relaxed text-center text-center text-center">נבנה בטכנולוגיית בינה מלאכותית מתקדמת • מותאם אישית למכשיר Samsung S25 Ultra • סרגל ניווט סטטי לשיפור חוויית הקריאה ונוחות המגע</p>
+        </div>
+    </footer>
+
+    <!-- חלון צף (Modal) -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/99 items-center justify-center p-4 backdrop-blur-3xl transition-all duration-700 opacity-0 text-right text-right" onclick="closeModal()">
+        <div class="relative max-w-6xl w-full flex flex-col items-center p-4 text-right text-right" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute -top-24 left-0 p-6 text-white bg-gray-800/70 hover:bg-red-600 rounded-full border border-white/10 shadow-2xl transition-all transform hover:rotate-90 active:scale-90 text-right text-right text-right text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <img src="../images/albania-double-headed-eagle.png" alt="עיט כפול-ראש אלבניה" class="max-w-full max-h-[70vh] object-contain rounded-[4rem] shadow-[0_0_200px_rgba(220,38,38,0.4)] border border-gray-700 scale-90 transition-transform duration-700" id="modalImg">
+            <div class="mt-16 text-center space-y-6 text-right text-right text-right text-right">
+                <h5 class="text-5xl font-black text-white tracking-[0.5em] uppercase italic text-right text-right text-right text-right text-right">Shqiponja dykrenare</h5>
+                <p class="text-red-500 font-black tracking-[0.3em] uppercase text-2xl text-right text-right text-right text-right text-right">הסמל המיתולוגי וההיסטורי של אלבניה • מחקר ויזואלי מעמיק</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            const m = document.getElementById('imageModal');
+            const img = document.getElementById('modalImg');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+            setTimeout(() => { m.classList.add('opacity-100'); img.classList.add('scale-100'); img.classList.remove('scale-90'); }, 20);
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            const m = document.getElementById('imageModal');
+            const img = document.getElementById('modalImg');
+            m.classList.remove('opacity-100');
+            img.classList.remove('scale-100');
+            img.classList.add('scale-90');
+            setTimeout(() => { m.classList.add('hidden'); m.classList.remove('flex'); }, 600);
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if(e.key === "Escape") closeModal(); });
+    </script>
+</body>
+</html>
